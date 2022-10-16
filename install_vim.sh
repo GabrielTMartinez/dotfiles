@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+set -e
 
 default_source_installations_location="$HOME/install_from_source"
 vim_github_repo="https://github.com/vim/vim"
