@@ -16,10 +16,11 @@ git clone $vim_github_repo
 cd vim/src
 
 # configs
-./configure --enable-pythoninterp
+# ./configure --enable-pythoninterp
+./configure --with-features=huge --enable-python3interp
 
 # compile and install
-make distclean
+# make distclean
 make
 sudo make install
 
