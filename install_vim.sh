@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-default_source_installations_location="~/install_from_source"
+default_source_installations_location="$HOME/install_from_source"
 vim_github_repo="https://github.com/vim/vim"
 
 # required tools
