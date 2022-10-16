@@ -3,6 +3,7 @@
 ssh-keygen -t ed25519 -C "GabrielTMartinez"
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_ed25519
+git remote set-url origin git@github.com:GabrielTMartinez/dotfiles.git
 
 CYAN='\033[0;36m'
 NC='\033[0m'
