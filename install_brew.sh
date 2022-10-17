@@ -9,6 +9,9 @@ echo '' >> $profile
 echo '# Homebrew' >> $profile
 echo '# Set PATH, MANPATH, etc., for Homebrew.' >> $profile
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> $profile
+
+source $profile
+
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 brew update
 

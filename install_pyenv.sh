@@ -2,14 +2,19 @@
 set -e
 
 bashrc="$HOME/.bashrc"
+profile="$HOME/.profile"
 
 # install pyenv
 brew install pyenv
 
 # pyenv env config
-echo '' >> $bashrc
-echo '# pyenv' >> $bashrc
-echo 'export PYENV_ROOT="$HOME/.pyenv"' >> $bashrc
-echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> $bashrc
-echo 'eval "$(pyenv init -)"' >> $bashrc
+echo '' | tee $bashrc $profile > /dev/null
+echo '# pyenv' | tee $bashrc $profile > /dev/null
+echo 'export PYENV_ROOT="$HOME/.pyenv"' | tee $bashrc $profile > /dev/null
+echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' | tee $bashrc $profile > /dev/null
+echo 'eval "$(pyenv init -)"' | tee $bashrc $profile > /dev/null
+
+# reload files
+source $bashrc
+source $profile
 
