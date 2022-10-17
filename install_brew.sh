@@ -16,6 +16,6 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 brew update
 
 # brew recommendations
-sudo apt-get install build-essential
-brew install gcc
+#sudo apt -y install build-essential
+#brew install gcc
 
