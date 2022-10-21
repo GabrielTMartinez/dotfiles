@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
-dotfiles_home="$HOME/.dotfiles/"
-dotfiles_backups="$dotfiles_home/backups/"
+dotfiles_home="$HOME/.dotfiles"
+dotfiles_backups="$dotfiles_home/backups"
 
 echo "Coping dotfiles to $dotfiles_home..."
 mkdir -p $dotfiles_home
