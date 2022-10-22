@@ -33,5 +33,5 @@ cd vim/src
 make
 sudo make install
 
-cd current_dir
+cd $current_dir
 

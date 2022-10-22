@@ -8,3 +8,6 @@ source $HOME/.nvm/nvm.sh
 nvm install --lts
 nvm use --lts
 
+echo 'nvm use node' >> $HOME/.bashrc
+echo 'nvm use node' >> $HOME/.zshrc
+
