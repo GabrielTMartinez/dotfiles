@@ -3,4 +3,4 @@ set -e
 
 nvm use node
 
-vim -c ':CocInstall coc-pyright'
+vim -c ':CocInstall coc-pyright | qall'
