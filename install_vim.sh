@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -e
 
+current_dir=$(pwd)
+
 default_source_installations_location="$HOME/install_from_source"
 vim_github_repo="https://github.com/vim/vim"
 
@@ -30,4 +32,6 @@ cd vim/src
 # compile and install
 make
 sudo make install
+
+cd current_dir
 
