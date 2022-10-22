@@ -13,7 +13,7 @@ echo '# Set PATH, MANPATH, etc., for Homebrew.' | tee -a $profiles > /dev/null
 echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' | tee -a $profiles > /dev/null
 
 source $profile
-source $zprofile
+#source $zprofile
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 brew update

@@ -19,10 +19,10 @@ echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' | tee 
 echo 'eval "$(pyenv init -)"' | tee -a $rcs_and_profiles > /dev/null
 
 # reload files
-source $bashrc
-source $zshrc
-source $profile
-source $zprofile
+# source $bashrc
+# source $zshrc
+# source $profile
+# source $zprofile
 
 # install pyenv dependencies, used for installing python from source
 sudo apt -y install build-essential gdb lcov pkg-config \
