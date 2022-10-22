@@ -24,3 +24,6 @@ source $zshrc
 source $profile
 source $zprofile
 
+# install pyenv dependencies, used for installing python from source
+sudo apt install zlib1g-dev
+
