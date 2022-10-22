@@ -17,6 +17,9 @@ set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 
+" disable coc.nvim warning message
+let g:coc_disable_startup_warning = 1
+
 " gruvbox colorscheme - https://github.com/morhetz/gruvbox
 
 " Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
