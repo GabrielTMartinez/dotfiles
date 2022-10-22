@@ -17,8 +17,11 @@ set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 
+" Enable backspace over auto indent etc
+set backspace=indent,eol,start
+
 " disable coc.nvim warning message
-let g:coc_disable_startup_warning = 1
+" let g:coc_disable_startup_warning = 1
 
 " gruvbox colorscheme - https://github.com/morhetz/gruvbox
 
