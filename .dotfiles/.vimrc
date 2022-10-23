@@ -20,6 +20,9 @@ set expandtab
 " Enable backspace over auto indent etc
 set backspace=indent,eol,start
 
+" Change Explorer / Netrw style to tree
+let g:netrw_liststyle=3
+
 " disable coc.nvim warning message
 " let g:coc_disable_startup_warning = 1
 
