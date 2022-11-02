@@ -2,11 +2,16 @@
 set -e
 
 # coc.nvim
+current_dir=$pwd
+
 nvm use node
 
-mkdir -p $HOME/.vim/pack/coc/start
-$(git clone --branch release https://github.com/neoclide/coc.nvim.git --depth=1 ~/.vim/pack/coc/start)
-vim -c "helptags $HOME/.vim/pack/coc/start/doc/ | qall"
+mkdir -p ~/.vim/pack/coc/start
+cd ~/.vim/pack/coc/start
+git clone --branch release https://github.com/neoclide/coc.nvim.git --depth=1
+vim -c "helptags coc.nvim/doc/ | qall"
+
+cd $current_dir
 
 # gruvbox
 $(git clone https://github.com/morhetz/gruvbox.git ~/.vim/pack/default/start/gruvbox)
