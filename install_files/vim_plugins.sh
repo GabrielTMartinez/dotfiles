@@ -6,7 +6,7 @@ nvm use node
 
 mkdir -p $HOME/.vim/pack/coc/start
 $(git clone --branch release https://github.com/neoclide/coc.nvim.git --depth=1 ~/.vim/pack/coc/start)
-vim -c "helptags $HOME/.vim/pack/coc/start/coc.nvim/doc/ | qall"
+vim -c "helptags $HOME/.vim/pack/coc/start/doc/ | qall"
 
 # gruvbox
 $(git clone https://github.com/morhetz/gruvbox.git ~/.vim/pack/default/start/gruvbox)
