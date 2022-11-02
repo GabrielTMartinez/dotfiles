@@ -5,7 +5,7 @@ sudo apt -y update
 sudo apt -y upgrade
 sudo apt -y autoremove
 
-current_dir=$pwd
+current_dir=$(pwd)
 cd ./install_files
 source ./zsh.sh
 source ./vim.sh
