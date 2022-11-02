@@ -9,8 +9,8 @@ current_dir=$pwd
 cd ./install_files
 source ./zsh.sh
 source ./vim.sh
-source ./vim_plugins.sh
 source ./nvm.sh
+source ./vim_plugins.sh
 source ./brew.sh
 source ./pyenv.sh
 source ./sdkman.sh

@@ -15,7 +15,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 echo 'source $HOME/.bash_aliases' >> $HOME/.zshrc
 
 # fonts that enable some symbols - used for powerlevel10k
-sudo apt -y install fonts-powerline
+# sudo apt -y install fonts-powerline
 
 # powerlevel10k
 echo ''

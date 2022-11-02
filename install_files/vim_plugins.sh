@@ -2,7 +2,6 @@
 set -e
 
 # coc.nvim
-
 nvm use node
 
 mkdir -p $HOME/.vim/pack/coc/start
