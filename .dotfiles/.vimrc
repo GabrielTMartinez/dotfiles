@@ -5,6 +5,11 @@ set t_vb=
 " turn on line numbers
 set number
 
+" ruler and cursor positions
+set ruler
+set cursorline
+set cursorcolumn
+
 " pathogen minimalist recommendations
 syntax on
 filetype plugin indent on
