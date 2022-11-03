@@ -1,3 +1,5 @@
+set encoding=utf-8
+
 " disable bell sounds
 set visualbell
 set t_vb=
@@ -27,6 +29,23 @@ set backspace=indent,eol,start
 
 " Change Explorer / Netrw style to tree
 let g:netrw_liststyle=3
+
+" ale
+" disable ale lsp
+let g:ale_disable_lsp = 1
+
+" coc.nvim
+" Some servers have issues with backup files, see #649.
+set nobackup
+set nowritebackup
+
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=300
+
+" Always show the signcolumn, otherwise it would shift the text each time
+" diagnostics appear/become resolved.
+set signcolumn=yes
 
 " disable coc.nvim warning message
 " let g:coc_disable_startup_warning = 1
