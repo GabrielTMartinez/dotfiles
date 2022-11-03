@@ -15,8 +15,8 @@ $(git clone https://github.com/morhetz/gruvbox.git ~/.vim/pack/default/start/gru
 #$(git clone --recursive https://github.com/davidhalter/jedi-vim.git ~/.vim/pack/jedi/start/jedi-vim)
 
 # pyright
-#nvm use node
-#vim -c ':CocInstall coc-pyright | qall'
+nvm use node
+vim -c ':CocInstall -sync coc-pyright | qall'
 
 # vim-airline
 $(git clone https://github.com/vim-airline/vim-airline.git ~/.vim/pack/default/start/vim-airline)
