@@ -2,11 +2,11 @@
 set -e
 
 # coc.nvim
-#nvm use node
+nvm use node
 
-#mkdir -p ~/.vim/pack/coc/start
-#git clone --branch release https://github.com/neoclide/coc.nvim.git --depth=1 ~/.vim/pack/coc/start/coc.nvim
-#vim -c "helptags ~/.vim/pack/coc/start/coc.nvim/doc/ | qall"
+mkdir -p ~/.vim/pack/coc/start
+git clone --branch release https://github.com/neoclide/coc.nvim.git --depth=1 ~/.vim/pack/coc/start/coc.nvim
+vim -c "helptags ~/.vim/pack/coc/start/coc.nvim/doc/ | qall"
 
 # gruvbox
 $(git clone https://github.com/morhetz/gruvbox.git ~/.vim/pack/default/start/gruvbox)
