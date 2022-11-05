@@ -11,9 +11,10 @@ source ./zsh.sh
 source ./vim.sh
 source ./nvm.sh
 source ./vim_plugins.sh
-source ./brew.sh
 source ./pyenv.sh
 source ./sdkman.sh
+source ./brew.sh
+source ./clojure.sh
 cd $all_current_dir
 
 source ./setup_dotfiles.sh
