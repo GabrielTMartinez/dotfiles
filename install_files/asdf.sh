@@ -17,6 +17,13 @@ autoload -Uz compinit && compinit
 # /asdf
 ' >> $HOME/.zshrc
 
+echo '
+# asdf
+. "$HOME/.asdf/asdf.sh"
+. "$HOME/.asdf/completions/asdf.bash"
+# /asdf
+' >> $HOME/.bashrc
+
 echo "Installing asdf... Done!"
 
 
