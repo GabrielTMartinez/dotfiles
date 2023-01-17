@@ -24,6 +24,8 @@ echo '
 # /asdf
 ' >> $HOME/.bashrc
 
+. $HOME/.bashrc
+
 echo "Installing asdf... Done!"
 
 
@@ -42,8 +44,8 @@ echo "Installing rust... Done!"
 
 echo "Installing nodejs..."
 asdf plugin add nodejs
-asdf install nodejs lts
-asdf global nodejs lts
+asdf install nodejs 18.12.1
+asdf global nodejs 18.12.1
 echo "Installing nodejs... Done!"
 
 echo "Installing java temurin..."
