@@ -31,7 +31,7 @@ echo '
 # /asdf
 ' >> $HOME/.bashrc
 
-. $HOME/.bashrc
+. "$HOME/.asdf/asdf.sh"
 
 echo "Installing asdf... Done!"
 
