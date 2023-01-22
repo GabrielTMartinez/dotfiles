@@ -6,6 +6,7 @@ echo "Executing full installation..."
 
 sudo apt -y update
 sudo apt -y upgrade
+sudo apt -y install snapd
 sudo apt -y autoremove
 
 source ./install_files/zsh.sh
