@@ -4,6 +4,6 @@ set -e
 
 echo "Installing bashtop..."
 
-sudo apt install bashtop
+sudo apt -y install bashtop
 
 echo "Installing bashtop... Done!"

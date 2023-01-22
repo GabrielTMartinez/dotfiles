@@ -5,7 +5,14 @@ set -e
 echo "Installing asdf..."
 
 sudo apt -y install curl git
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
+
+latest_version=$(git ls-remote --refs --tags https://github.com/asdf-vm/asdf.git \
+    | cut --delimiter='/' --fields=3     \
+    | tr '-' '~'                         \
+    | sort --version-sort                \
+    | tail --lines=1)
+
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch $latest_version
 
 echo '
 # asdf
