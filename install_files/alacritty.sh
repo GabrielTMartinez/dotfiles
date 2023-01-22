@@ -4,7 +4,7 @@ set -e
 
 echo "Installing alacritty..."
 
-#snap install alacritty
+#sudo snap install alacritty
 
 git clone https://github.com/alacritty/alacritty.git
 cd alacritty

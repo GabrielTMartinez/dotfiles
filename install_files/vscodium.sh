@@ -4,7 +4,7 @@ set -e
 
 echo "Installing vscodium..."
 
-snap install codium --classic
+sudo snap install codium --classic
 
 #wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
 #    | gpg --dearmor \
