@@ -8,7 +8,7 @@ sudo apt -y install btop
 
 echo '
 # btop
-echo 'alias top="btop"'
+alias top="btop"
 # /btop
 ' >> $HOME/.zshrc
 
