@@ -14,6 +14,7 @@ sudo apt -y install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-
 cargo build --release
 
 echo 'Verifying installation...'
+sudo tic -xe alacritty,alacritty-direct extra/alacritty.info
 infocmp alacritty
 echo 'Verifying installation... Done!'
 
