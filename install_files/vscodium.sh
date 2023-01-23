@@ -4,8 +4,8 @@ set -e
 
 echo "Installing vscodium..."
 
-# INSTALL FROM SNAP
-sudo snap install codium --classic
+# INSTALL FROM FLATPAK
+flatpak install flathub com.vscodium.codium
 
 
 # INSTALL FROM APT
