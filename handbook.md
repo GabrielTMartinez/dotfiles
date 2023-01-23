@@ -13,3 +13,11 @@ vim -c :Lexplore
 
 # good hex
 282A36
+
+# create tar gz
+tar -czvf file.tar.gz directory
+tar -czvf file.tar.gz file1.jpg file2.txt
+
+# extract tar gz
+tar -xzvf file.tar.gz -C directory
+tar -xzvf file.tar.gz

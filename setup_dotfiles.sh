@@ -6,10 +6,10 @@ dotfiles_backups="$dotfiles_home/backups"
 
 echo "Coping dotfiles to $dotfiles_home..."
 mkdir -p $dotfiles_home
-cp -a .dotfiles/. $dotfiles_home
+cp -a dotfiles/. $dotfiles_home
 
 this_backup_folder="$dotfiles_backups/$(date +'%Y_%m_%d_%H_%M_%S')"
-for file_name in .dotfiles/.[^.]*; do
+for file_name in dotfiles/.[^.]*; do
     full_file_name="$HOME/${file_name##*/}"
     
     if [ -f $full_file_name ]; then
