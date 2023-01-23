@@ -33,6 +33,14 @@ echo 'Installing manual pages... Done!'
 cd ..
 
 # INSTALL THEMES
+sudo apt -y install powerline
+echo '
+# powerline
+powerline-daemon -q
+. /usr/share/powerline/bindings/zsh/powerline.zsh
+# /powerline
+' >> $HOME/.zshrc
+
 git clone https://github.com/eendroroy/alacritty-theme.git ~/.alacritty-colorscheme
 
 mkdir -p $HOME/.fonts/Hack/
