@@ -4,10 +4,6 @@ set -e
 
 echo "Installing vscodium..."
 
-# INSTALL FROM FLATPAK
-flatpak install -y flathub com.vscodium.codium
-
-
 # INSTALL FROM APT
 #wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
 #    | gpg --dearmor \
@@ -17,5 +13,14 @@ flatpak install -y flathub com.vscodium.codium
 #    | sudo tee /etc/apt/sources.list.d/vscodium.list
 #
 #sudo apt -y update && sudo apt -y install codium
+
+# INSTALL FROM SOURCE
+sudo apt -y install gcc make pkg-config libx11-dev libxkbfile-dev libsecret-1-dev fakeroot rpm dpkg python3 imagemagick
+
+git clone https://github.com/VSCodium/vscodium.git
+cd vscodium
+./build/build.sh
+
+cd ..
 
 echo "Installing vscodium... Done!"
