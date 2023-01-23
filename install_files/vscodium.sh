@@ -15,7 +15,10 @@ echo "Installing vscodium..."
 #sudo apt -y update && sudo apt -y install codium
 
 # INSTALL FROM SOURCE
-sudo apt -y install gcc make pkg-config libx11-dev libxkbfile-dev libsecret-1-dev fakeroot rpm dpkg python3 imagemagick
+sudo apt -y install jq gcc make pkg-config libx11-dev libxkbfile-dev libsecret-1-dev fakeroot rpm dpkg python3 imagemagick
+
+corepack enable
+corepack prepare yarn@stable --activate
 
 git clone https://github.com/VSCodium/vscodium.git
 cd vscodium
