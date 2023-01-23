@@ -5,7 +5,7 @@ set -e
 echo "Installing vscodium..."
 
 # INSTALL FROM FLATPAK
-flatpak install flathub com.vscodium.codium
+flatpak install -y flathub com.vscodium.codium
 
 
 # INSTALL FROM APT
