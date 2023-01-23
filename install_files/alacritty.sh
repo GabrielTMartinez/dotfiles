@@ -5,7 +5,7 @@ set -e
 echo "Installing alacritty..."
 
 # INSTALL FROM SNAP
-sudo snap install alacritty
+sudo snap install alacritty --classic
 
 # INSTALL FROM SOURCE
 #git clone https://github.com/alacritty/alacritty.git
@@ -44,4 +44,3 @@ fc-cache -f -v
 fc-list | grep "Hack"
 
 echo "Installing alacritty... Done!"
-
