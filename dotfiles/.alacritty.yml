@@ -1,5 +1,8 @@
 import:
-  - ~/.alacritty-colorscheme/themes/gruvbox_dark.yaml
+  - $HOME/.alacritty-colorscheme/themes/gruvbox_dark.yaml
+
+shell:
+  program: /usr/bin/zsh
 
 selection:
   save_to_clipboard: true
