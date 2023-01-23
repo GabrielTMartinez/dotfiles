@@ -6,8 +6,6 @@ echo "Executing full installation..."
 
 sudo apt -y update
 sudo apt -y upgrade
-sudo apt -y install flatpak
-flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 sudo apt -y autoremove
 
 . ./install_files/zsh.sh
