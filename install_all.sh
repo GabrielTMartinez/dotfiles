@@ -6,13 +6,12 @@ echo "Executing full installation..."
 
 sudo apt -y update
 sudo apt -y upgrade
-sudo apt -y autoremove
 
 . ./install_files/zsh.sh
 
 . ./install_files/asdf.sh
 
-. ./install_files/vscodium.sh
+#. ./install_files/vscodium.sh
 
 . ./install_files/alacritty.sh
 
@@ -29,6 +28,10 @@ sudo apt -y autoremove
 
 . ./setup_dotfiles.sh
 #. ./setup_wsl.sh
+
+. ./install_files/apps.sh
+
+sudo apt -y autoremove
 
 echo -e '\nDONT FORGET TO CHANGE YOUR SHELL TO ZSH WITH\nchsh -s $(which zsh)\n'
 
