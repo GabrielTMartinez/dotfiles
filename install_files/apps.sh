@@ -18,5 +18,6 @@ flatpak install -y flathub com.spotify.Client
 echo "Installing Spotify... Done!"
 
 echo "Installing Steam..."
-flatpak install -y flathub com.valvesoftware.Steam
+#flatpak install -y flathub com.valvesoftware.Steam
+sudo apt -y install steam
 echo "Installing Steam... Done!"
