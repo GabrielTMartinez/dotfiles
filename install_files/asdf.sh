@@ -55,6 +55,12 @@ asdf install nodejs 18.12.1
 asdf global nodejs 18.12.1
 echo "Installing nodejs... Done!"
 
+echo "Installing yarn..."
+asdf plugin add yarn
+asdf install yarn 1.22.19
+asdf global yarn 1.22.19
+echo "Installing yarn... Done!"
+
 echo "Installing java temurin..."
 asdf plugin add java
 asdf install java temurin-17.0.5+8
