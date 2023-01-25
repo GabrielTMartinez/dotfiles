@@ -18,6 +18,7 @@ flatpak install -y flathub com.spotify.Client
 echo "Installing Spotify... Done!"
 
 echo "Installing Steam..."
-#flatpak install -y flathub com.valvesoftware.Steam
-sudo apt -y install steam
+flatpak install -y flathub com.valvesoftware.Steam
+flatpak override --user --filesystem=/media/GabrielTMartinez/hdd com.valvesoftware.Steam
+#sudo apt -y install steam
 echo "Installing Steam... Done!"
