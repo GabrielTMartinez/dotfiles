@@ -9,6 +9,7 @@ zsh --version
 echo '
 alias gst="git status"
 alias gpa="git pull --all"
+alias gca="git commit -am"
 
 HISTSIZE=5000               #How many lines of history to keep in memory
 HISTFILE=$HOME/.zsh_history #Where to save history to disk
