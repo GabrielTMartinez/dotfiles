@@ -50,6 +50,14 @@
 
     - Clusters
 
+    - Microservices
+
+    - Virtualization
+
+      - Virtual Machines (VMs)
+
+      - Containers (docker)
+
   - Programming  paradagims
 
     - Declarative
@@ -75,6 +83,8 @@
         > Fuzzy / Multi paradigm
 
         - SOLID Principles
+
+        - Hexagonal Architecture
 
         - New things / fixed operations
 
@@ -233,4 +243,107 @@
       - Visual Studio
 
       - Jupyter Notebooks?
+
+# Operating systems
+
+  - OSes
+
+    - Windows
+
+    - UNIX
+
+      - BSD
+
+        - FreeBSD
+
+      - Linux
+
+        - Debian
+
+          - Ubuntu
+            > Kubuntu
+            > Xubuntu
+            > etc
+
+            - Mint
+
+            - Pop!_OS
+
+            - MX Linux
+
+            - Zorin
+
+        - Arch
+
+          - Manjaro
+
+          - Endevouros
+
+        - Fedora
+
+          - Red Hat Enterprise Linux (RHEL)
+
+          - CentOS
+
+        - Alpine
+
+        - OpenSUSE
+
+        - Slackware
+
+        - Gentoo
+
+        - NixOS
+
+        - ...
+
+        - Desktop Environments (DEs)
+          > DEs must implements using Display Servers
+
+          - Gnome
+
+          - KDE
+
+          - XFCE
+
+          - LXQt
+
+          - Cosmic (Pop!_OS)
+
+        - Display Servers
+          > DEs must implements using Display Servers
+
+          - Xorg / X11 (old)
+
+          - Wayland (new)
+
+      - MacOS
+
+  - Boot sequence
+
+    - Firmware
+
+      - BIOS
+
+      - Paritition table
+
+        - MBR
+
+        - File system
+
+          - fat / fat32 / NTFS
+
+          - ext1,2,3,4 / btrfs
+
+          - 
+
+          - ZFS
+
+          - exFAT
+
+        - OS boot - /boot / Windows boot partition / etc
+
+        - GPT
+
+      - UEFI
 
