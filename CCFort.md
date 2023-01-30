@@ -279,9 +279,9 @@
 
           - Endevouros
 
-        - Fedora
+        - Red Hat Enterprise Linux (RHEL)
 
-          - Red Hat Enterprise Linux (RHEL)
+          - Fedora
 
           - CentOS
 
@@ -294,6 +294,8 @@
         - Gentoo
 
         - NixOS
+
+        - Puppy
 
         - ...
 
