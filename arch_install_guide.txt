@@ -1,0 +1,70 @@
+# arch guide
+## keyboard layout config
+	ls /usr/share/kbd/**/*.map.gz | grep 'br'
+loadkeys br-abnt2
+
+## disk
+### partitioning
+fdisk -l
+fdisk /dev/sda
+> ...
+
+### file systems
+mkfs.ext4 /dev/sda1 # boot
+mkswap /dev/sda2 # swap
+mkfs.btrfs /dev/sda3 # root
+
+### mount points
+mount /dev/sda3 /mnt
+mount --mkdir /dev/sda1 /mnt/boot
+swapon /dev/sda2
+
+lsblk -o name,size,fstype,mountpoints
+
+## arch installation
+pacstrap -K /mnt base linux linux-firmware networkmanager
+
+genfstab -U /mnt >> /mnt/etc/fstab
+
+arch-chroot /mnt
+
+systemctl enable NetworkManager
+
+ln -sf /usr/share/zoneinfo/Region/City /etc/localtime
+hwclock --systohc
+hwclock
+
+pacman -Syyu
+pacman -S neovim
+
+nvim /etc/locale.gen
+>... # uncomment languages
+locale-gen
+nvim /etc/locale.conf
+>LANG=...
+nvim /etc/vconsole.conf
+>KEYMAP=br-abnt2
+
+nvim /etc/hostname
+>...
+
+passwd
+
+### boot loader
+pacman -S grub
+grub-install --target=i386-pc /dev/sda
+grub-mkconfig -o /boot/grub/grub.cfg
+
+reboot
+
+## post-install
+pacman -S sudo vi man
+useradd -m sandboxer
+passwd sandboxer
+groupadd sudo
+usermod -a -G sudo sandboxer
+visudo /etc/sudoers
+>%sudo ALL=(ALL:ALL) ALL
+
+pacman -S xorg plasma sddm sddm-kcm
+systemctl enable sddm
