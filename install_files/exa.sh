@@ -8,7 +8,7 @@ sudo apt -y install exa
 
 echo '
 # exa
-alias ls="exa -lah"
+alias cexa="exa -lah"
 # /exa
 ' >> $HOME/.zshrc
 

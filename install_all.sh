@@ -15,6 +15,8 @@ sudo apt -y upgrade
 
 . ./install_files/alacritty.sh
 
+. ./install_files/docker.sh
+
 #. ./install_files/tmux.sh
 
 . ./install_files/exa.sh
