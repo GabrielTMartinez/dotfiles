@@ -23,12 +23,13 @@ sudo apt -y upgrade
 . ./install_files/btop.sh
 . ./install_files/ripgrep.sh
 . ./install_files/duf.sh
+. ./install_files/batcat.sh
 #. ./install_files/bashtop.sh
 
 #. ./install_files/vim.sh
 #. ./install_files/vim_plugins.sh
 
-#TODO ncdu fd-find batcat?
+#TODO ncdu fd-find
 
 . ./setup_dotfiles.sh
 #. ./setup_wsl.sh
