@@ -7,10 +7,6 @@ sudo apt -y install zsh
 zsh --version
 
 echo '
-alias gst="git status"
-alias gpa="git pull --all"
-alias gca="git commit -am"
-
 HISTSIZE=5000               #How many lines of history to keep in memory
 HISTFILE=$HOME/.zsh_history #Where to save history to disk
 SAVEHIST=5000               #Number of history entries to save to disk
