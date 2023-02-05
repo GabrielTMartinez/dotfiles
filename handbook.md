@@ -11,7 +11,7 @@ vim -c :Lexplore
 # SHOULD BE EXECUTED IN THE ROOT OF THE PROJECT
 :CocInstall coc-pyright
 
-# good hex
+# good color hex
 282A36
 
 # create tar gz
@@ -34,3 +34,19 @@ See man flatpak-installation for the format.
 2. Add a remote with e.g. flatpak --installation=extra remote-add flathub https://flathub.org/repo/flathub.flatpakrepo
 3. Install to it with e.g. flatpak --installation=extra install flathub org.inkscape.Inkscape
 4. Run from it with e.g. flatpak run org.inkscape.Inkscape
+
+# linux useful commands
+fdisk -l : list partitions/devices info
+lsblk -o name,size,fstype,type,mountpoints,uuid : list partitions/devices info
+blkid : list uuids for devices
+fdisk <path_to_disk> : start disk partitioning
+/etc/fstab : text file containing desirable mount points at boot
+
+xxd <file> : print bytes in hex and bytes-to-ascii of the file
+hexdump <file> : print bytes in hex of the file
+objdump -<opt> <file> : print info about the object
+file <file> : print info about the file
+strings <file>: print human readble strings from a file
+readelf -a <file>: print info about an elf file
+
+loadkeys <keyboard_layout/br-abnt2> : set current keyboard layout

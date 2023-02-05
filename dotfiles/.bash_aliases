@@ -1,5 +1,0 @@
-alias gst="git status"
-alias gpa="git pull --all"
-alias gca="git commit -am"
-alias clah="ls -lah"
-alias chmodu="chmod -R u=rwx"
