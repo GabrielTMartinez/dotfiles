@@ -24,6 +24,7 @@ sudo apt -y upgrade
 . ./install_files/ripgrep.sh
 . ./install_files/duf.sh
 . ./install_files/batcat.sh
+. ./install_files/tree.sh
 #. ./install_files/bashtop.sh
 
 #. ./install_files/vim.sh
