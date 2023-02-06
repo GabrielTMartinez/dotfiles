@@ -44,7 +44,7 @@ powerline-daemon -q
 git clone https://github.com/eendroroy/alacritty-theme.git ~/.alacritty-colorscheme
 
 mkdir -p $HOME/.fonts/Hack/
-tar -xzvf ./fonts/hack_fonts.tar.gz -C $HOME/.fonts/Hack/
+tar -xzvf ./fonts/hack_nerd_font.tar.gz -C $HOME/.fonts/Hack/
 fc-cache -f -v
 fc-list | grep "Hack"
 
