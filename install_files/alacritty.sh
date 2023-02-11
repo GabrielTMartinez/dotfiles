@@ -4,6 +4,9 @@ set -e
 
 echo "Installing alacritty..."
 
+install_cmd alacritty
+
+: <<'END'
 # INSTALL FROM SOURCE
 git clone https://github.com/alacritty/alacritty.git
 cd alacritty
@@ -31,13 +34,15 @@ gzip -c extra/alacritty-msg.man | sudo tee /usr/local/share/man/man1/alacritty-m
 echo 'Installing manual pages... Done!'
 
 cd ..
+END
 
 # INSTALL THEMES
-sudo apt -y install powerline
+install_cmd powerline
 echo '
 # powerline
 powerline-daemon -q
-. /usr/share/powerline/bindings/zsh/powerline.zsh
+test -x /usr/share/powerline/bindings/zsh/powerline.zsh && /usr/share/powerline/bindings/zsh/powerline.zsh
+test -x /usr/share/powerline/zsh/powerline.zsh && /usr/share/powerline/zsh/powerline.zsh
 # /powerline
 ' >> $HOME/.zshrc
 
