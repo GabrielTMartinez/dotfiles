@@ -4,14 +4,14 @@ set -e
 
 command_exists() {
   if ! command -v $1 &> /dev/null; then
-    return 1
+    cmd_exists=0
   fi
-  return 0
+  cmd_exists=1
 }
 
 select_package_manager() {
   command_exists 'apt'
-  if [ $? -eq 0 ]; then
+  if [ cmd_exists -eq 1 ]; then
       echo 'apt found! using it as the package manager!'
       pkgman='apt'
       update_cmd='apt update -y && apt upgrade -y'
@@ -19,7 +19,7 @@ select_package_manager() {
       autoremove_cmd='apt autoremove -y'
   else
     command_exists 'dnf'
-    if [ $? -eq 0 ]; then
+    if [ cmd_exists -eq 1 ]; then
       echo 'dnf found! using it as the package manager!'
       pkgman='dnf'
       update_cmd='dnf update -y'
@@ -27,7 +27,7 @@ select_package_manager() {
       autoremove_cmd='dnf autoremove -y'
     else
       command_exists 'pacman'
-      if [ $? -eq 0 ]; then
+      if [ cmd_exists -eq 1 ]; then
         echo 'pacman found! using it as the package manager!'
         pkgman='pacman'
         update_cmd='pacman -Syyu --noconfirm'
@@ -46,15 +46,14 @@ update_cmd
 
 . ./install_files/zsh.sh
 
+. ./install_files/alacritty.sh
+. ./install_files/tmux.sh
+
 . ./install_files/asdf.sh
 
 #. ./install_files/vscodium.sh
 
-. ./install_files/alacritty.sh
-
 . ./install_files/docker.sh
-
-#. ./install_files/tmux.sh
 
 . ./install_files/exa.sh
 . ./install_files/btop.sh
