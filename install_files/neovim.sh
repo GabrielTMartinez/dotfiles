@@ -4,6 +4,11 @@ set -e
 
 echo "Installing neovim..."
 
+# INSTALL FROM REPO
+$install_cmd neovim
+
+: <<'END'
+# INSTALL FROM STABLE BINARY
 cd /tmp/
 
 curl -L -O https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.deb
@@ -19,5 +24,6 @@ fi
 sudo dpkg -i nvim-linux64.deb
 
 cd -
+END
 
 echo "Installing neovim... Done!"
