@@ -15,6 +15,7 @@ elif [ "$pkgman" = "dnf" ]; then
   sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
 
 elif [ "$pkgman" = "pacman" ]; then
+  ''
   #$install_cmd --needed base-devel openssl zlib xz tk
 fi
 
