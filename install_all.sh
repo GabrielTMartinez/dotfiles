@@ -65,6 +65,7 @@ eval ${update_cmd}
 . ./install_files/tree.sh
 #. ./install_files/bashtop.sh
 
+. ./install_files/neovim.sh
 #. ./install_files/vim.sh
 #. ./install_files/vim_plugins.sh
 
