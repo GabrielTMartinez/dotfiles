@@ -4,6 +4,11 @@ set -e
 
 echo "Installing asdf..."
 
+if [ -d "$HOME/.asdf" ]; then
+  echo "$HOME/.asdf already exists, skipping asdf installation"
+  return 0
+fi
+
 $install_cmd curl git
 
 latest_version=$(git ls-remote --refs --tags https://github.com/asdf-vm/asdf.git \
@@ -12,7 +17,7 @@ latest_version=$(git ls-remote --refs --tags https://github.com/asdf-vm/asdf.git
     | sort --version-sort                \
     | tail --lines=1)
 
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch $latest_version
+git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch $latest_version
 
 echo '
 # asdf
