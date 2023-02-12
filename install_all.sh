@@ -11,7 +11,7 @@ command_exists() {
 
 select_package_manager() {
   command_exists 'apt'
-  if [ cmd_exists -eq 1 ]; then
+  if [ $cmd_exists -eq 1 ]; then
       echo 'apt found! using it as the package manager!'
       pkgman='apt'
       update_cmd='apt update -y && apt upgrade -y'
@@ -19,7 +19,7 @@ select_package_manager() {
       autoremove_cmd='apt autoremove -y'
   else
     command_exists 'dnf'
-    if [ cmd_exists -eq 1 ]; then
+    if [ $cmd_exists -eq 1 ]; then
       echo 'dnf found! using it as the package manager!'
       pkgman='dnf'
       update_cmd='dnf update -y'
@@ -27,7 +27,7 @@ select_package_manager() {
       autoremove_cmd='dnf autoremove -y'
     else
       command_exists 'pacman'
-      if [ cmd_exists -eq 1 ]; then
+      if [ $cmd_exists -eq 1 ]; then
         echo 'pacman found! using it as the package manager!'
         pkgman='pacman'
         update_cmd='pacman -Syyu --noconfirm'
