@@ -4,7 +4,7 @@ set -e
 
 echo "Installing asdf..."
 
-sudo apt -y install curl git
+$install_cmd curl git
 
 latest_version=$(git ls-remote --refs --tags https://github.com/asdf-vm/asdf.git \
     | cut --delimiter='/' --fields=3     \
@@ -37,7 +37,13 @@ echo "Installing asdf... Done!"
 
 
 echo "Installing python..."
-sudo apt -y install git zlib1g-dev libffi-dev libssl-dev libbz2-dev libncursesw5-dev libgdbm-dev liblzma-dev libsqlite3-dev tk-dev uuid-dev libreadline-dev
+if [ "$pkgman" = "apt" ]; then
+  $install_cmd git zlib1g-dev libffi-dev libssl-dev libbz2-dev libncursesw5-dev libgdbm-dev liblzma-dev libsqlite3-dev tk-dev uuid-dev libreadline-dev
+elif [ "$pkgman" = "dnf" ]; then
+  $install_cmd make gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel xz-devel libuuid-devel gdbm-devel libnsl2-devel
+elif [ "$pkgman" = "pacman" ]; then
+  $install_cmd --needed base-devel openssl zlib xz tk
+fi
 asdf plugin add python
 asdf install python 3.11.1
 asdf global python 3.11.1
