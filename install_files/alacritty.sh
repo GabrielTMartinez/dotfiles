@@ -46,8 +46,10 @@ test -x /usr/share/powerline/zsh/powerline.zsh && /usr/share/powerline/zsh/power
 # /powerline
 ' >> $HOME/.zshrc
 
-git clone https://github.com/eendroroy/alacritty-theme.git ~/.alacritty-colorscheme
+rm -rf $HOME/.alacritty-colorscheme
+git clone https://github.com/eendroroy/alacritty-theme.git $HOME/.alacritty-colorscheme
 
+rm -rf $HOME/.fonts/Hack/
 mkdir -p $HOME/.fonts/Hack/
 tar -xzvf ./fonts/hack_nerd_font.tar.gz -C $HOME/.fonts/Hack/
 fc-cache -f -v
