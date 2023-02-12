@@ -60,7 +60,7 @@ $update_cmd
 . ./install_files/btop.sh
 . ./install_files/ripgrep.sh
 . ./install_files/duf.sh
-. ./install_files/batcat.sh
+. ./install_files/bat.sh
 . ./install_files/tree.sh
 #. ./install_files/bashtop.sh
 
