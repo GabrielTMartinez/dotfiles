@@ -15,7 +15,7 @@ select_package_manager() {
   if [ $cmd_exists -eq 1 ]; then
       echo 'apt found! using it as the package manager!'
       pkgman='apt'
-      update_cmd='apt -y update && apt -y upgrade'
+      update_cmd='apt -y update ; apt -y upgrade'
       install_cmd='apt -y install'
       autoremove_cmd='apt -y autoremove'
   else
