@@ -52,6 +52,7 @@ $update_cmd
 
 . ./install_files/asdf.sh
 
+. ./install_files/vscode.sh
 #. ./install_files/vscodium.sh
 
 . ./install_files/docker.sh
