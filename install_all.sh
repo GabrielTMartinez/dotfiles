@@ -5,8 +5,9 @@ set -e
 command_exists() {
   if ! command -v $1 &> /dev/null; then
     cmd_exists=0
+  else
+    cmd_exists=1
   fi
-  cmd_exists=1
 }
 
 select_package_manager() {

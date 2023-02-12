@@ -4,6 +4,6 @@ set -e
 
 echo "Installing btop..."
 
-sudo apt -y install btop
+$install_cmd btop
 
 echo "Installing btop... Done!"

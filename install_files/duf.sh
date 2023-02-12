@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -e
 
-
-sudo apt -y install duf
+echo "Installing duf..."
+$install_cmd duf
+echo "Installing duf... Done!"

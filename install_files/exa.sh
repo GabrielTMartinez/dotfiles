@@ -4,7 +4,7 @@ set -e
 
 echo "Installing exa..."
 
-sudo apt -y install exa
+$install_cmd exa
 
 echo '
 # exa

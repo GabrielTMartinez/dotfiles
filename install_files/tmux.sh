@@ -4,6 +4,11 @@ set -e
 
 echo "Installing tmux..."
 
+# INSTALL FROM REPO
+$install_cmd tmux
+
+: <<'END'
+# INSTALL FROM SOURCE
 sudo apt -y install libevent-dev ncurses-dev build-essential bison pkg-config \
 	autoconf automake \
 	libevent ncurses
@@ -14,5 +19,6 @@ sh autogen.sh
 ./configure && make
 
 cd ..
+END
 
 echo "Installing tmux... Done!"
