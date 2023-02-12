@@ -4,7 +4,7 @@ set -e
 
 echo "Installing alacritty..."
 
-install_cmd alacritty
+$install_cmd alacritty
 
 : <<'END'
 # INSTALL FROM SOURCE
@@ -37,7 +37,7 @@ cd ..
 END
 
 # INSTALL THEMES
-install_cmd powerline
+$install_cmd powerline
 echo '
 # powerline
 powerline-daemon -q

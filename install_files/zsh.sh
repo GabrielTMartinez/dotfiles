@@ -3,7 +3,7 @@ set -e
 
 
 echo "Installing zsh..."
-sudo apt -y install zsh
+$install_cmd zsh
 zsh --version
 
 echo '

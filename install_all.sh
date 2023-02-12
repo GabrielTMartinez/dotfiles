@@ -42,7 +42,7 @@ select_package_manager
 
 echo "Executing full installation..."
 
-update_cmd
+$update_cmd
 
 . ./install_files/zsh.sh
 
@@ -73,7 +73,7 @@ update_cmd
 
 . ./install_files/apps.sh
 
-autoremove_cmd
+$autoremove_cmd
 
 echo -e '\nDONT FORGET TO CHANGE YOUR SHELL TO ZSH WITH\nchsh -s $(which zsh)\n'
 
