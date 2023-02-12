@@ -20,7 +20,7 @@ elif [ "$pkgman" = "pacman" ]; then
   #$install_cmd --needed base-devel openssl zlib xz tk
 fi
 
-$update_cmd
+eval ${update_cmd}
 $install_cmd docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 sudo systemctl enable --now docker
