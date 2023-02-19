@@ -63,13 +63,14 @@ eval ${update_cmd}
 . ./install_files/duf.sh
 . ./install_files/bat.sh
 . ./install_files/tree.sh
+. ./install_files/fd-find.sh
 #. ./install_files/bashtop.sh
 
 . ./install_files/neovim.sh
 #. ./install_files/vim.sh
 #. ./install_files/vim_plugins.sh
 
-#TODO ncdu fd-find
+#TODO ncdu 
 
 . ./setup_dotfiles.sh
 #. ./setup_wsl.sh
