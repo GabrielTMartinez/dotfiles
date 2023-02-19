@@ -4,7 +4,6 @@ set -e
 
 echo "Installing lunarvim..."
 
-echo "Installing python..."
 if [ "$pkgman" = "dnf" ]; then
   $install_cmd g++ libstdc++.x86_64 libstdc++-devel.x86_64 libstdc++-static.x86_64 libstdc++-docs.x86_64 libstdc++ gcc-c++-x86_64-linux-gnu.x86_64 gcc
 fi
