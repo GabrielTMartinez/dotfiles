@@ -50,3 +50,12 @@ strings <file>: print human readble strings from a file
 readelf -a <file>: print info about an elf file
 
 loadkeys <keyboard_layout/br-abnt2> : set current keyboard layout
+
+# create readonly btrfs snapshot - WARN Does not include subvolume below, e.g. / does not include /home
+sudo btrfs subvolume snapshot -r <btrfs-subvolume> ./snapname
+## send snapshot to another btrfs file system
+sudo btrfs send snapname | sudo btrfs receive backup-drive/
+## create new subvolume
+sudo btrfs subvolume create <subvolume-name>
+## restore snapshot
+sudo btrfs subvolume snapshot snapname <subvolume-name>
