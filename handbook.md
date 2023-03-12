@@ -74,6 +74,7 @@ docker build -t <tag> .
 docker run --rm -dp <container-port>:<host-port> <image/tag>
 docker exec -it <container> bash
 
+docker stop -a
 docker ps -a
 docker images
 docker container prune # remove all non running conteiners
