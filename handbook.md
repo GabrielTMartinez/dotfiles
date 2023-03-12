@@ -59,3 +59,24 @@ sudo btrfs send snapname | sudo btrfs receive backup-drive/
 sudo btrfs subvolume create <subvolume-name>
 ## restore snapshot
 sudo btrfs subvolume snapshot snapname <subvolume-name>
+
+# kvm
+## on fedora
+sudo dnf group install --with-optional virtualization
+
+# check which ports are listening
+sudo netstat -tulpn | grep LISTEN
+sudo lsof -i -P -n | grep LISTEN
+sudo ss -tulpn | grep LISTEN
+
+# docker
+docker build -t <tag> .
+docker run --rm -dp <container-port>:<host-port> <image/tag>
+docker exec -it <container> bash
+
+docker ps -a
+docker images
+docker container prune # remove all non running conteiners
+docker rmi <image>
+docker rm <container>
+
