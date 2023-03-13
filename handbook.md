@@ -72,6 +72,7 @@ sudo ss -tulpn | grep LISTEN
 # docker
 docker build -t <tag> .
 docker run --rm -dp <container-port>:<host-port> <image/tag>
+docker run --network host -d image
 docker exec -it <container> bash
 
 docker stop -a
