@@ -43,6 +43,7 @@ fdisk <path_to_disk> : start disk partitioning
 /etc/fstab : text file containing desirable mount points at boot
 
 xxd <file> : print bytes in hex and bytes-to-ascii of the file
+ldd <file> : print shared object dependencies 
 hexdump <file> : print bytes in hex of the file
 objdump -<opt> <file> : print info about the object
 file <file> : print info about the file
