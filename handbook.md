@@ -83,3 +83,19 @@ docker container prune # remove all non running conteiners
 docker rmi <image>
 docker rm <container>
 
+# hashicorp vault
+## install
+sudo apt update && sudo apt install gpg
+wget -O- https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+sudo apt update && sudo apt install vault
+
+## startup
+vault server -dev
+
+## cli client usage
+export VAULT_ADDR='http://127.0.0.1:8200'
+export VAULT_TOKEN="<Root Token>"
+vault status
+vault kv put -mount=secret hello foo=world bar=moon
+vault kv get -mount=secret hello
