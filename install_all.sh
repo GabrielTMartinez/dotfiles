@@ -58,7 +58,7 @@ eval ${update_cmd}
 . ./setup_dotfiles.sh
 #. ./setup_wsl.sh
 
-. ./install_files/apps.sh
+#. ./install_files/apps.sh
 
 $autoremove_cmd
 
