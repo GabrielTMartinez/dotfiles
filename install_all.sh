@@ -45,18 +45,13 @@ echo "Executing full installation..."
 
 eval ${update_cmd}
 
-. ./install_files/utilities.sh
-
-. ./install_files/alacritty.sh
-. ./install_files/tmux.sh
+. ./install_files/cli-utils.sh
+. ./install_files/term-utils.sh
 
 . ./install_files/asdf.sh
-
-#. ./install_files/vscode.sh
+. ./install_files/vscode.sh
 
 . ./install_files/docker.sh
-
-. ./install_files/neovim.sh
 
 #TODO ncdu 
 
