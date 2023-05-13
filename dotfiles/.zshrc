@@ -1,13 +1,20 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # Zsh command history
 HISTFILE=~/.zsh_cmd_history # Where to save history to disk
 HISTSIZE=5000 # How many lines of history to keep in memory
 SAVEHIST=5000 # Number of history entries to save to disk
 
 # Zsh opts
-setopt nomatch 
 setopt appendhistory #Append history to the history file (no overwriting)
 setopt sharehistory #Share history across terminals
 setopt incappendhistory #Immediately append to the history file, not just when a term is killed
+setopt nomatch 
 unsetopt autocd beep extendedglob notify
 
 # check key values using: read -r
@@ -29,7 +36,17 @@ alias gpa="git pull --all"
 alias gca="git commit -am"
 alias clah="ls -lah"
 alias cexa="exa -lah"
-alias bat="batcat"
+#alias bat="batcat"
+
+# powerlevel10k
+source ~/powerlevel10k/powerlevel10k.zsh-theme
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# powerline
+#powerline-daemon -q
+#test -x /usr/share/powerline/bindings/zsh/powerline.zsh && /usr/share/powerline/bindings/zsh/powerline.zsh
+#test -x /usr/share/powerline/zsh/powerline.zsh && /usr/share/powerline/zsh/powerline.zsh
 
 # asdf
 . "$HOME/.asdf/asdf.sh"
