@@ -45,7 +45,7 @@ echo "Executing full installation..."
 
 eval ${update_cmd}
 
-. ./install_files/zsh.sh
+. ./install_files/utilities.sh
 
 . ./install_files/alacritty.sh
 . ./install_files/tmux.sh
@@ -56,15 +56,6 @@ eval ${update_cmd}
 #. ./install_files/vscodium.sh
 
 . ./install_files/docker.sh
-
-. ./install_files/exa.sh
-. ./install_files/btop.sh
-. ./install_files/ripgrep.sh
-. ./install_files/duf.sh
-. ./install_files/bat.sh
-. ./install_files/tree.sh
-. ./install_files/fd-find.sh
-#. ./install_files/bashtop.sh
 
 . ./install_files/neovim.sh
 #. ./install_files/vim.sh
