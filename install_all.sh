@@ -53,13 +53,10 @@ eval ${update_cmd}
 . ./install_files/asdf.sh
 
 #. ./install_files/vscode.sh
-#. ./install_files/vscodium.sh
 
 . ./install_files/docker.sh
 
 . ./install_files/neovim.sh
-#. ./install_files/vim.sh
-#. ./install_files/vim_plugins.sh
 
 #TODO ncdu 
 
