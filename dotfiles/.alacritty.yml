@@ -1,5 +1,5 @@
 import:
-  - $HOME/.alacritty-colorscheme/themes/gruvbox_dark.yaml
+  - $HOME/.config/alacritty/themes/themes/gruvbox_material.yaml
 
 shell:
   program: /usr/bin/zsh
@@ -18,3 +18,4 @@ font:
     family: Hack Nerd Font Mono
   bold_italic:
     family: Hack Nerd Font Mono
+
