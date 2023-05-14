@@ -49,7 +49,6 @@ eval ${update_cmd}
 . ./install_files/term-utils.sh
 
 . ./install_files/asdf.sh
-. ./install_files/vscode.sh
 
 . ./install_files/docker.sh
 
