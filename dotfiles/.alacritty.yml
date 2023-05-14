@@ -1,5 +1,5 @@
 import:
-  - $HOME/.config/alacritty/themes/themes/gruvbox_material.yaml
+  - ~/.config/alacritty/themes/themes/gruvbox_material.yaml
 
 shell:
   program: /usr/bin/zsh
