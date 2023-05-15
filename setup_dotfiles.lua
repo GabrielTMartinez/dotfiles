@@ -14,14 +14,13 @@ file_names['.p10k.zsh'] = home
 file_names['.tmux.conf'] = home
 file_names['.zshrc'] = home
 
-for k, v in pairs(file_names) do
-    full_file_path = v..k
+for file_name, file_path in pairs(file_names) do
+    full_file_path = file_path..file_name
     if file_exists(full_file_path) then
         backup_file_name = string.format('%s-%s', full_file_path, run_time)
         print(string.format('Saving a backup in: %s', backup_file_name))
         os.rename(full_file_path, backup_file_name)
     end
-    print(string.format('Copying file ./dotfiles/%s to %s', k, full_file_path))
-    os.execute("cp ./dotfiles/%s %s", k, full_file_path)
+    print(string.format('Copying file ./dotfiles/%s to %s', file_name, full_file_path))
+    os.execute(string.format("cp ./dotfiles/%s %s"), file_name, full_file_path)
 end
-
