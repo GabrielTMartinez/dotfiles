@@ -22,5 +22,5 @@ for file_name, file_path in pairs(file_names) do
         os.rename(full_file_path, backup_file_name)
     end
     print(string.format('Copying file ./dotfiles/%s to %s', file_name, full_file_path))
-    os.execute(string.format("cp ./dotfiles/%s %s"), file_name, full_file_path)
+    os.execute(string.format("cp ./dotfiles/%s %s", file_name, full_file_path))
 end
