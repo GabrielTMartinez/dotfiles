@@ -51,8 +51,8 @@ os.system("${update_cmd}")
 subprocess.run("./install_files/cli-utils.sh", shell=True)
 subprocess.run("./install_files/term-utils.sh", shell=True)
 
-# subprocess.run('./install_files/asdf.sh', shell=True)
-# subprocess.run('./install_files/docker.sh', shell=True)
+subprocess.run('./install_files/asdf.sh', shell=True)
+subprocess.run('./install_files/docker.sh', shell=True)
 
 # TODO ncdu
 
