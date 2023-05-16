@@ -20,4 +20,3 @@ fc-list | grep "Hack"
 rm -rf $HOME/powerlevel10k/
 tar -xzvf ./powerlevel10k.tar.gz -C $HOME/
 ls $HOME/powerlevel10k/
-
