@@ -69,13 +69,13 @@ input * {
     xkb_layout "br"
 }
 
-default_border pixel 2
-gaps outer 3
-gaps inner 3
+default_border pixel 4
+gaps outer 1
+gaps inner 2
 
-#set $opacity 0.8
+set $opacity 0.9
 #for_window [class=".*"] opacity $opacity
-for_window [app_id="Alacritty"] opacity 0.8
+for_window [app_id="Alacritty"] opacity $opacity 
 
 # set $cl_high #009ddc
 # set $cl_indi #d9d8d8
