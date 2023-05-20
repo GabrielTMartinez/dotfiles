@@ -16,6 +16,7 @@ def setup_dotfiles():
         ".p10k.zsh": f"{home}/",
         ".tmux.conf": f"{home}/",
         ".zshrc": f"{home}/",
+        "config": f"{config_folder}/sway/",
     }
 
     for file_name in file_names:
