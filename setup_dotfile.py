@@ -1,5 +1,4 @@
 import os
-#import shutil
 from datetime import datetime
 from pathlib import Path
 
@@ -28,5 +27,5 @@ def setup_dotfiles():
             os.rename(full_file_path, backup_file_name)
 
         print(f"Creating symlink for ./dotfiles/{file_name} in {full_file_path}")
-        os.symlink(f'./dotfiles/{file_name}', f'{full_file_path}')
-        #shutil.copy(f"./dotfiles/{file_name}", f"{full_file_path}")
+        os.symlink(f'{Path().resolve()}/dotfiles/{file_name}', f'{full_file_path}')
+
