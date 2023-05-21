@@ -5,7 +5,7 @@ set -e
 $install_cmd alacritty neovim tmux powerline
 
 if [ "$pkgman" = "dnf" ]; then
-    sudo dnf groupinstall "Development Tools" "Development Libraries"
+    sudo dnf groupinstall -y "Development Tools" "Development Libraries"
     $install_cmd gcc-c++
 fi
 
