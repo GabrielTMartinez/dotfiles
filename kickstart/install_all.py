@@ -14,7 +14,7 @@ def get_pkg_manager():
     }
     if shutil.which("apt"):
         pkg_man["pkgman"] = "apt"
-        pkg_man["update_cmd"] = "sudo apt -y update; sudo apt -y upgrade"
+        pkg_man["update_cmd"] = "sudo apt -y update && sudo apt -y upgrade"
         pkg_man["install_cmd"] = "sudo apt -y install"
         pkg_man["autoremove_cmd"] = "sudo apt -y autoremove"
     elif shutil.which("dnf"):
@@ -46,7 +46,7 @@ set_bash_cmds(pkg_man)
 
 print("Executing full installation")
 
-os.system("${update_cmd}")
+subprocess.run("${update_cmd}", shell=True)
 
 subprocess.run("./install_files/cli-utils.sh", shell=True)
 subprocess.run("./install_files/term-utils.sh", shell=True)
@@ -59,9 +59,7 @@ subprocess.run("./install_files/docker.sh", shell=True)
 setup_dotfile.setup_dotfiles()
 # subprocess.run('./setup_wsl.sh', shell=True)
 
-# subprocess.run('./install_files/apps.sh', shell=True)
-
-os.system("${autoremove_cmd}")
+subprocess.run("${autoremove_cmd}", shell=True)
 
 print("\nDONT FORGET TO CHANGE YOUR SHELL TO ZSH WITH\nchsh -s ${which zsh}\n")
 
