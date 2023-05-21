@@ -4,6 +4,11 @@ set -e
 
 $install_cmd alacritty neovim tmux powerline
 
+if [ "$pkgman" = "dnf" ]; then
+    sudo dnf groupinstall "Development Tools" "Development Libraries"
+    $install_cmd gcc-c++
+fi
+
 # alacritty themes
 rm -rf $HOME/.config/alacritty/themes
 mkdir -p $HOME/.config/alacritty/themes
