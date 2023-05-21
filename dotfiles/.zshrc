@@ -53,6 +53,26 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
 
+# auto activate python venv on cd
+function cd() {
+  builtin cd "$@"
+
+  if [[ -z "$VIRTUAL_ENV" ]] ; then
+    ## If env folder is found then activate the vitualenv
+      if [[ -d ./venv ]] ; then
+        source ./venv/bin/activate
+      fi
+  else
+    ## check the current folder belong to earlier VIRTUAL_ENV folder
+    # if yes then do nothing
+    # else deactivate
+      parentdir="$(dirname "$VIRTUAL_ENV")"
+      if [[ "$PWD"/ != "$parentdir"/* ]] ; then
+        deactivate
+      fi
+  fi
+}
+
 # Some visual glues like git repo in command line, using zstyle
 zstyle :compinstall filename '/home/lightwanderer/.zshrc' 
 
