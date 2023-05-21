@@ -90,7 +90,7 @@ for_window [app_id="Alacritty"] opacity $opacity
 # client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 
 ### Key bindings
-    bindsym $mod+g exec firefox --private-window
+    bindsym $mod+g exec firefox
 
 #
 # Basics:
