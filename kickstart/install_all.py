@@ -2,7 +2,7 @@ import os
 import shutil
 import subprocess
 
-import setup_dotfile
+import setup_dotfile as setup_dotfile
 
 
 def get_pkg_manager():
