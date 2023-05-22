@@ -2,13 +2,17 @@
 set -e
 
 
-$install_cmd neovim tmux powerline
+$install_cmd tmux powerline
 
 # build tools
 if [ "$pkgman" = "dnf" ]; then
     sudo dnf groupinstall -y "Development Tools" "Development Libraries"
     $install_cmd gcc-c++
 fi
+
+# neovim
+sudo curl -o /usr/bin/nvim -L https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
+sudo chmod +x /usr/bin/nvim
 
 # alacritty
 if [ "$pkgman" = "apt" ]; then
