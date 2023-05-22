@@ -2,12 +2,28 @@
 set -e
 
 
-$install_cmd alacritty neovim tmux powerline
+$install_cmd neovim tmux powerline
 
+# build tools
 if [ "$pkgman" = "dnf" ]; then
     sudo dnf groupinstall -y "Development Tools" "Development Libraries"
     $install_cmd gcc-c++
 fi
+
+# alacritty
+if [ "$pkgman" = "apt" ]; then
+    $install_cmd cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
+elif [ "$pkgman" = "dnf" ]; then
+    $install_cmd cmake freetype-devel fontconfig-devel libxcb-devel libxkbcommon-devel g++
+elif [ "$pkgman" = "pacman" ]; then
+    $install_cmd cmake freetype2 fontconfig pkg-config make libxcb libxkbcommon python
+fi
+
+rm -rf /tmp/alacritty
+git clone https://github.com/alacritty/alacritty.git /tmp/alacritty
+cd /tmp/alacritty
+cargo build --release
+cd -
 
 # alacritty themes
 rm -rf $HOME/.config/alacritty/themes
