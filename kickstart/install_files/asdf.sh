@@ -16,6 +16,8 @@ else
       | tail --lines=1)
 
   git clone https://github.com/asdf-vm/asdf.git $HOME/.asdf --branch $latest_version
+  
+  source $HOME/.zshrc
 
   echo "Installing asdf... Done!"
 
