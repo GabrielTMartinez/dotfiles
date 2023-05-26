@@ -23,10 +23,13 @@ elif [ "$pkgman" = "pacman" ]; then
     $install_cmd cmake freetype2 fontconfig pkg-config make libxcb libxkbcommon python
 fi
 
+. "$HOME/.asdf/asdf.sh"
+
 rm -rf /tmp/alacritty
 git clone https://github.com/alacritty/alacritty.git /tmp/alacritty
 cd /tmp/alacritty
 cargo build --release
+sudo cp target/release/alacritty /usr/local/bin
 cd -
 
 # alacritty themes
