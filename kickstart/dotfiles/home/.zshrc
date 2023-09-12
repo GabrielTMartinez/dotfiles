@@ -34,6 +34,7 @@ bindkey "^[[3;5~" kill-word
 alias gst="git status"
 alias gpa="git pull --all"
 alias gca="git commit -am"
+alias gdf="git diff"
 alias clah="ls -lah"
 alias cexa="exa -lah"
 #alias bat="batcat"
