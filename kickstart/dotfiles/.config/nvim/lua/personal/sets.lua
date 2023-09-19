@@ -42,3 +42,5 @@ vim.opt.updatetime = 300
 -- Always show the signcolumn, otherwise it would shift the text each time diagnostics appear/become resolved.
 --vim.opt.signcolumn = "yes"
 
+-- Disable omnifunc (params autocomplete) scratchpad open
+vim.opt.completeopt = { "menu" }

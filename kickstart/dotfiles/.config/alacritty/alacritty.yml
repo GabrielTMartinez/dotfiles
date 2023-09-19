@@ -1,0 +1,20 @@
+import:
+  - ~/.config/alacritty/themes/themes/gruvbox_dark.yaml
+
+shell:
+  program: /usr/bin/zsh
+
+selection:
+  save_to_clipboard: true
+
+#startup_mode: Maximized
+
+font:
+  normal:
+    family: Hack Nerd Font Mono
+  bold:
+    family: Hack Nerd Font Mono
+  italic:
+    family: Hack Nerd Font Mono
+  bold_italic:
+    family: Hack Nerd Font Mono
