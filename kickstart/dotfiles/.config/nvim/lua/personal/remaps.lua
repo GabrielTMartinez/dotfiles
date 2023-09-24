@@ -19,3 +19,8 @@ vim.keymap.set("n", "<leader>if", "gg=G<C-o>")
 -- Omnifunc (params autocomplete)
 vim.keymap.set("i", "<C-Space><C-Space>", "<C-x><C-o>")
 
+-- LSP Rename
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
+
+-- Code actions
+vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>")

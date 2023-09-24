@@ -1,5 +1,5 @@
 -- yank to system clipboard
-vim.opt.clipboard:append("unnamedplus")
+-- vim.opt.clipboard:append("unnamedplus")
 
 vim.opt.encoding = "utf-8"
 
