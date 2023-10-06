@@ -1,13 +1,14 @@
 import:
-  - ~/.config/alacritty/themes/themes/gruvbox_dark.yaml
+  - ~/.config/alacritty/themes/themes/tokyo-night.yaml
+  
 
 shell:
   program: /usr/bin/zsh
 
-selection:
-  save_to_clipboard: true
+# selection:
+#   save_to_clipboard: true
 
-#startup_mode: Maximized
+# startup_mode: Maximized
 
 font:
   normal:

@@ -1,5 +1,7 @@
-import = ["/home/tama/.config/alacritty/themes/themes/dracula.toml"]
-#startup_mode = "Maximized"
+import = ["/home/tama/.config/alacritty/themes/themes/tokyo-night.toml"]
+
+
+# startup_mode = "Maximized"
 
 [font.bold]
 family = "Hack Nerd Font Mono"
@@ -13,8 +15,8 @@ family = "Hack Nerd Font Mono"
 [font.normal]
 family = "Hack Nerd Font Mono"
 
-[selection]
-save_to_clipboard = true
+# [selection]
+# save_to_clipboard = true
 
 [shell]
 program = "/usr/bin/zsh"
