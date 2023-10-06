@@ -20,7 +20,7 @@ unsetopt autocd beep extendedglob notify
 # check key values using: read -r
 # check current binds using: bindkey
 # generate this file using: autoload zkbd ; zkbd
-source /home/lightwanderer/.zkbd/alacritty-:0
+source ~/.zkbd/alacritty-:0
 bindkey "${key[Home]}" beginning-of-line
 bindkey "${key[End]}" end-of-line
 bindkey "${key[Delete]}" delete-char
