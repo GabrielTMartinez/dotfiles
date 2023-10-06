@@ -14,7 +14,7 @@ vim.opt.relativenumber = true
 
 -- ruler and cursor positions
 --vim.opt.ruler = true
---vim.opt.cursorline = true
+vim.opt.cursorline = true
 vim.opt.cursorcolumn = true
 
 -- pathogen minimalist recommendations
@@ -37,10 +37,24 @@ vim.g.netrw_liststyle = 3
 
 -- Having longer updatetime (default is 4000 ms  =  4 s) leads to noticeable
 -- delays and poor user experience.
-vim.opt.updatetime = 300
+vim.opt.updatetime = 250
+vim.opt.timeoutlen = 300
 
 -- Always show the signcolumn, otherwise it would shift the text each time diagnostics appear/become resolved.
 --vim.opt.signcolumn = "yes"
 
 -- Disable omnifunc (params autocomplete) scratchpad open
-vim.opt.completeopt = { "menu" }
+-- vim.opt.completeopt = { "menu" }
+vim.opt.completeopt = { "menuone,noselect" }
+
+-- [[ Highlight on yank ]]
+-- See `:help vim.highlight.on_yank()`
+local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
+vim.api.nvim_create_autocmd('TextYankPost', {
+  callback = function()
+    vim.highlight.on_yank()
+  end,
+  group = highlight_group,
+  pattern = '*',
+})
+
