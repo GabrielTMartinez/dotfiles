@@ -35,8 +35,7 @@ alias gst="git status"
 alias gpa="git pull --all"
 alias gca="git commit -am"
 alias gdf="git diff"
-alias clah="ls -lah"
-alias cexa="exa -lah"
+alias l="exa -lah -s name"
 #alias bat="batcat"
 
 # powerlevel10k
