@@ -36,6 +36,7 @@ See man flatpak-installation for the format.
 4. Run from it with e.g. flatpak run org.inkscape.Inkscape
 
 # linux useful commands
+# ALWAYS DO `sudo mount -a` AFTER CHANGING /ETC/FSTAB BEFORE RESTARTING THE COMPUTER #
 fdisk -l : list partitions/devices info
 lsblk -o name,size,fstype,type,mountpoints,uuid : list partitions/devices info
 blkid : list uuids for devices
