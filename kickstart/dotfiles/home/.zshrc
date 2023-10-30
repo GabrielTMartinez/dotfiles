@@ -20,7 +20,9 @@ unsetopt autocd beep extendedglob notify
 # check key values using: read -r
 # check current binds using: bindkey
 # generate this file using: autoload zkbd ; zkbd
-source ~/.zkbd/alacritty-:0
+# source ~/.zkbd/alacritty-:0
+source ~/.zkbd/tmux-256color-:0
+
 bindkey "${key[Home]}" beginning-of-line
 bindkey "${key[End]}" end-of-line
 bindkey "${key[Delete]}" delete-char
@@ -29,6 +31,9 @@ bindkey "^[[1;5D" backward-word
 bindkey "^H" backward-kill-word
 bindkey "^[[3;5~" kill-word
 #bindkey -e # What set of key binds to use (vim or emacs)
+
+source ~/.zsh_vars
+export PATH="${PATH}:${HOME}/.config/emacs/bin"
 
 # aliases
 alias gst="git status"
