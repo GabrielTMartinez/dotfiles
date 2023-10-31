@@ -24,6 +24,10 @@ Plug 'tpope/vim-commentary'
 
 let mapleader=" "
 
+"" Yanks/puts
+map <leader>y "+y
+map <leader>p "+p
+
 "" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
 "" [C]ode remaps
 map <leader>ci <Action>(ReformatCode)
