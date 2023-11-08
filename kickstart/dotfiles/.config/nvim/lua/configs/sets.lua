@@ -3,6 +3,8 @@
 
 vim.opt.encoding = "utf-8"
 
+vim.opt.termguicolors = true
+
 -- disable bell sounds
 vim.opt.belloff = "all"
 --vim.opt.visualbell = true
