@@ -12,3 +12,10 @@ vim.keymap.set("n", "<leader>if", "gg=G<C-o>")
 -- Omnifunc (params autocomplete)
 vim.keymap.set("i", "<C-Space><C-Space>", "<C-x><C-o>")
 
+-- Autoclose pairs
+vim.keymap.set("i", "(", "()<Left>")
+vim.keymap.set("i", "{", "{}<Left>")
+vim.keymap.set("i", "[", "[]<Left>")
+vim.keymap.set("i", "\"", "\"\"<Left>")
+vim.keymap.set("i", "'", "''<Left>")
+
