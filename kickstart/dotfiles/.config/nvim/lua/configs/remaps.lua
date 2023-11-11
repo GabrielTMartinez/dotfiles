@@ -4,7 +4,9 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>ex", vim.cmd.Ex)
 
 --run black for current file
--- vim.keymap.set("n", "<leader>cr", ':!black % <CR>')
+vim.keymap.set("n", "<leader>cf", ':!black % <CR><CR>')
+vim.keymap.set("n", "<leader>cl", ':!ruff --fix % <CR><CR>')
+-- buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 
 -- Indent
 vim.keymap.set("n", "<leader>if", "gg=G<C-o>")
