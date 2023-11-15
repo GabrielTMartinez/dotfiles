@@ -60,3 +60,16 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
+--Command for buffer diff since last save
+vim.api.nvim_create_user_command('BufferDiff', function()
+    pcall(function ()
+        vim.cmd(":w !diff % -")
+    end)
+end, { desc = 'Show buffer changes since last save' })
+
+--Command for buffer diff since last save
+vim.api.nvim_create_user_command('GitChanged', function()
+    pcall(function ()
+        vim.cmd(":enew | read !git diff --name-only")
+    end)
+end, { desc = 'Open a new buffer with the paths of changed git files' })

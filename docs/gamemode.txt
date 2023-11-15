@@ -1,0 +1,14 @@
+# docs
+https://github.com/FeralInteractive/gamemode
+
+# install
+dnf install meson systemd-devel pkg-config git dbus-devel
+git clone https://github.com/FeralInteractive/gamemode.git
+cd gamemode
+git checkout 1.7 # omit to build the master branch
+./bootstrap.sh
+gamemoded -t
+
+# uninstall
+systemctl --user stop gamemoded.service
+ninja uninstall -C builddir
