@@ -151,6 +151,7 @@ local themeConfig = {
         vim.cmd.colorscheme 'tokyonight-night'
         --vim.cmd.colorscheme 'kanagawa-dragon'
         --vim.cmd.colorscheme 'catppuccin'
+        vim.cmd(":highlight Normal guibg=none")
     end,
 }
 
