@@ -21,3 +21,8 @@ font:
     family: Hack Nerd Font Mono
   bold_italic:
     family: Hack Nerd Font Mono
+
+window:
+  decorations: none
+
+  opacity: 0.95
