@@ -1,7 +1,7 @@
 vim.g.mapleader = " "
 
 --Explore Tree (file tree)
-vim.keymap.set("n", "<leader>ex", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>ex", ':NvimTreeToggle<CR>')
 
 --run black for current file
 vim.keymap.set("n", "<leader>cf", ':!black % <CR><CR>')

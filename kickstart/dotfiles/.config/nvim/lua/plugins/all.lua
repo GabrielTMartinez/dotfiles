@@ -224,6 +224,17 @@ local telescopeConfig = {
     },
 }
 
+nvimTreeConfig = {
+  "nvim-tree/nvim-tree.lua",
+  version = "*",
+  lazy = false,
+  dependencies = {
+    "nvim-tree/nvim-web-devicons",
+  },
+  config = function()
+    require("nvim-tree").setup {}
+  end,
+}
 
 
 return {
@@ -232,6 +243,7 @@ return {
     themeConfig,
     lualineConfig,
     gitsignsConfig,
+    nvimTreeConfig,
 
     {
         -- Add indentation guides even on blank lines

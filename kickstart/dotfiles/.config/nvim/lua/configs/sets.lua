@@ -35,7 +35,10 @@ vim.opt.expandtab = true
 vim.opt.backspace = { "indent", "eol", "start" }
 
 -- Change Explorer / Netrw style to tree
-vim.g.netrw_liststyle = 3
+-- vim.g.netrw_liststyle = 3
+-- Disable netrw if using an explorer plugin, like nvim-tree
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- Having longer updatetime (default is 4000 ms  =  4 s) leads to noticeable
 -- delays and poor user experience.
