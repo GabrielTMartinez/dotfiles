@@ -83,4 +83,5 @@ zstyle :compinstall filename '/home/lightwanderer/.zshrc'
 
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
+zstyle ':completion:*' menu select
 
