@@ -11,8 +11,8 @@ if [ "$pkgman" = "dnf" ]; then
 fi
 
 # neovim
-sudo curl -o /usr/bin/nvim -L https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
-sudo chmod +x /usr/bin/nvim
+#sudo curl -o /usr/bin/nvim -L https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
+#sudo chmod +x /usr/bin/nvim
 
 # alacritty
 if [ "$pkgman" = "apt" ]; then
@@ -23,19 +23,19 @@ elif [ "$pkgman" = "pacman" ]; then
     $install_cmd cmake freetype2 fontconfig pkg-config make libxcb libxkbcommon python
 fi
 
-. "$HOME/.asdf/asdf.sh"
+#. "$HOME/.asdf/asdf.sh"
 
-rm -rf /tmp/alacritty
-git clone https://github.com/alacritty/alacritty.git /tmp/alacritty
-cd /tmp/alacritty
-cargo build --release
-sudo cp target/release/alacritty /usr/local/bin
+#rm -rf /tmp/alacritty
+#git clone https://github.com/alacritty/alacritty.git /tmp/alacritty
+#cd /tmp/alacritty
+#cargo build --release
+#sudo cp target/release/alacritty /usr/local/bin
 
 # desktop entry
-sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
-sudo desktop-file-install extra/linux/Alacritty.desktop
-sudo update-desktop-database
-cd -
+#sudo cp extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg
+#sudo desktop-file-install extra/linux/Alacritty.desktop
+#sudo update-desktop-database
+#cd -
 
 
 # alacritty themes

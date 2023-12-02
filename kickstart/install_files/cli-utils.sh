@@ -2,4 +2,4 @@
 set -e
 
 
-$install_cmd wl-clipboard bat btop duf exa fd-find ripgrep tree zsh git curl
+$install_cmd wl-clipboard bat btop duf eza fd-find ripgrep tree zsh git curl

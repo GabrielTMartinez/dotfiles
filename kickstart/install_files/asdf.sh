@@ -34,11 +34,11 @@ else
 
   echo "Installing python build-tools... Done!"
 
-  echo "Installing rust..."
+  #echo "Installing rust..."
 
-  asdf plugin add rust
-  asdf install rust stable
-  asdf global rust stable
+  #asdf plugin add rust
+  #asdf install rust stable
+  #asdf global rust stable
 
-  echo "Installing rust... Done!"
+  #echo "Installing rust... Done!"
 fi
