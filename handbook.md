@@ -60,6 +60,8 @@ sudo btrfs subvol list /
 sudo btrfs subvol list -s /
 # create readonly btrfs snapshot - WARN Does not include subvolume below, e.g. / does not include /home
 sudo btrfs subvolume snapshot -r <btrfs-subvolume> ./<snapname>
+## change snap ownership when necessary - its always root initially
+sudo chown -R $(id -u):$(id -g) <snapname>/
 ## send snapshot to another btrfs file system
 sudo btrfs send <snapname> | sudo btrfs receive backup-drive/
 ## create new subvolume
