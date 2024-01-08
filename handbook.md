@@ -107,3 +107,8 @@ export VAULT_TOKEN="<Root Token>"
 vault status
 vault kv put -mount=secret hello foo=world bar=moon
 vault kv get -mount=secret hello
+
+# make to changes to grub / kernel mods params / general kernel params
+nvim /etc/default/grub
+# remake grub config to apply changes on next boot
+sudo grub2-mkconfig -o /boot/grub2/grub.cfg
