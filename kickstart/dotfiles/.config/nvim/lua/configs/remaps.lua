@@ -21,3 +21,5 @@ vim.keymap.set("i", "[", "[]<Left>")
 vim.keymap.set("i", "\"", "\"\"<Left>")
 vim.keymap.set("i", "'", "''<Left>")
 
+-- Ctrl+c
+vim.keymap.set({"n","v"}, "<C-c>", "\"+y")
