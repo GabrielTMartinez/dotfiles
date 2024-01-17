@@ -21,7 +21,8 @@ unsetopt autocd beep extendedglob notify
 # check current binds using: bindkey
 # generate this file using: autoload zkbd ; zkbd
 # source ~/.zkbd/alacritty-:0
-source ~/.zkbd/tmux-256color-:0
+# source ~/.zkbd/tmux-256color-:0
+source ~/.zkbd/screen-256color-:0
 
 bindkey "${key[Home]}" beginning-of-line
 bindkey "${key[End]}" end-of-line
