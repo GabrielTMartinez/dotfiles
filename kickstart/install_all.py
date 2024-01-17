@@ -22,6 +22,11 @@ def get_pkg_manager():
         pkg_man["update_cmd"] = "sudo dnf update -y"
         pkg_man["install_cmd"] = "sudo dnf install -y"
         pkg_man["autoremove_cmd"] = "sudo dnf autoremove -y"
+    elif shutil.which("zypper"):
+        pkg_man["pkgman"] = "zypper"
+        pkg_man["update_cmd"] = "sudo zypper dup -y"
+        pkg_man["install_cmd"] = "sudo zypper in -y"
+        pkg_man["autoremove_cmd"] = ""
     elif shutil.which("pacman"):
         pkg_man["pkgman"] = "pacman"
         pkg_man["update_cmd"] = "sudo pacman -Syyu --noconfirm"

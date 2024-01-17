@@ -28,6 +28,8 @@ else
     $install_cmd git zlib1g-dev libffi-dev libssl-dev libbz2-dev libncursesw5-dev libgdbm-dev liblzma-dev libsqlite3-dev tk-dev uuid-dev libreadline-dev
   elif [ "$pkgman" = "dnf" ]; then
     $install_cmd make gcc zlib-devel bzip2 bzip2-devel readline-devel sqlite sqlite-devel openssl-devel tk-devel libffi-devel xz-devel libuuid-devel gdbm-devel libnsl2-devel
+  elif [ "$pkgman" = "zypper" ]; then
+    $install_cmd gcc automake bzip2 libbz2-devel xz xz-devel openssl-devel ncurses-devel readline-devel zlib-devel tk-devel libffi-devel sqlite3-devel gdbm-devel make findutils patch
   elif [ "$pkgman" = "pacman" ]; then
     $install_cmd --needed base-devel openssl zlib xz tk
   fi

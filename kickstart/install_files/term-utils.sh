@@ -2,7 +2,7 @@
 set -e
 
 
-$install_cmd tmux powerline
+$install_cmd tmux powerline alacritty
 
 # build tools
 if [ "$pkgman" = "dnf" ]; then

@@ -21,7 +21,11 @@ elif [ "$pkgman" = "pacman" ]; then
 fi
 
 eval ${update_cmd}
-$install_cmd docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+if [ "$pkgman" = "zypper" ]; then
+  $install_cmd docker docker-compose docker-compose-switch
+else
+  $install_cmd docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+fi
 
 sudo systemctl enable --now docker
 
