@@ -59,6 +59,9 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 # append completions to fpath
 fpath=(${ASDF_DIR}/completions $fpath)
 
+# asdf java
+. $HOME/.asdf/plugins/java/set-java-home.zsh
+
 # auto activate python venv on cd
 function cd() {
   builtin cd "$@"

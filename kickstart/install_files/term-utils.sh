@@ -53,4 +53,4 @@ fc-list | grep "Hack"
 # powerlevel10k
 rm -rf $HOME/powerlevel10k/
 tar -xzvf ./compressed_files/powerlevel10k.tar.gz -C $HOME/
-ls $HOME/powerlevel10k/
+git -C $HOME/powerlevel10k pull
