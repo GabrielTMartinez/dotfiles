@@ -227,7 +227,7 @@ local telescopeConfig = {
     },
 }
 
-nvimTreeConfig = {
+local nvimTreeConfig = {
   "nvim-tree/nvim-tree.lua",
   version = "*",
   lazy = false,
@@ -238,7 +238,6 @@ nvimTreeConfig = {
     require("nvim-tree").setup {}
   end,
 }
-
 
 return {
     telescopeConfig,
@@ -267,6 +266,10 @@ return {
             vim.keymap.set("n", "<C-_>", "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>")
             vim.keymap.set("x", "<C-_>", "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>")
         end
+    },
+
+    {
+        'tpope/vim-fugitive'
     },
 
     treesitterConfig,
