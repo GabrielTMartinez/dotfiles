@@ -143,8 +143,8 @@ local themeConfig = {
     --'navarasu/onedark.nvim',
     --'morhetz/gruvbox',
     -- 'folke/tokyonight.nvim',
-    --'rebelot/kanagawa.nvim',
-    'catppuccin/nvim',
+    'rebelot/kanagawa.nvim',
+    -- 'catppuccin/nvim',
     -- "neanias/everforest-nvim",
     priority = 1000,
     config = function()
@@ -152,7 +152,8 @@ local themeConfig = {
         --vim.cmd.colorscheme 'gruvbox'
         -- vim.cmd.colorscheme 'tokyonight-night'
         --vim.cmd.colorscheme 'kanagawa-dragon'
-        vim.cmd.colorscheme 'catppuccin'
+        vim.cmd.colorscheme 'kanagawa-wave'
+        -- vim.cmd.colorscheme 'catppuccin'
         -- vim.cmd.colorscheme 'everforest'
         vim.cmd(":highlight Normal guibg=none")
     end,

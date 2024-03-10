@@ -1,4 +1,4 @@
-import = ["~/.config/alacritty/themes/themes/catppuccin_mocha.toml"]
+import = ["~/.config/alacritty/themes/themes/kanagawa_wave.toml"]
 
 [font.bold]
 family = "Hack Nerd Font Mono"
