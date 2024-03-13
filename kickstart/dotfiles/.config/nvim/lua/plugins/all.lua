@@ -140,18 +140,18 @@ local treesitterConfig = {
 }
 
 local themeConfig = {
-    --'navarasu/onedark.nvim',
-    --'morhetz/gruvbox',
+    -- 'navarasu/onedark.nvim',
+    -- 'morhetz/gruvbox',
     -- 'folke/tokyonight.nvim',
     'rebelot/kanagawa.nvim',
     -- 'catppuccin/nvim',
     -- "neanias/everforest-nvim",
     priority = 1000,
     config = function()
-        --vim.cmd.colorscheme 'onedark'
-        --vim.cmd.colorscheme 'gruvbox'
+        -- vim.cmd.colorscheme 'onedark'
+        -- vim.cmd.colorscheme 'gruvbox'
         -- vim.cmd.colorscheme 'tokyonight-night'
-        --vim.cmd.colorscheme 'kanagawa-dragon'
+        -- vim.cmd.colorscheme 'kanagawa-dragon'
         vim.cmd.colorscheme 'kanagawa-wave'
         -- vim.cmd.colorscheme 'catppuccin'
         -- vim.cmd.colorscheme 'everforest'
@@ -166,12 +166,13 @@ local lualineConfig = {
     opts = {
         options = {
             icons_enabled = false,
-            --theme = 'onedark',
-            --theme = 'gruvbox',
+            -- theme = 'onedark',
+            -- theme = 'gruvbox',
             -- theme = 'tokyonight',
-            --theme = 'kanagawa',
-            theme = 'catppuccin',
+            -- theme = 'kanagawa',
+            -- theme = 'catppuccin',
             -- theme = 'everforest',
+            theme = 'auto',
             component_separators = '|',
             section_separators = '',
         },
