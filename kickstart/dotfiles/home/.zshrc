@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Zsh command history
 HISTFILE=~/.zsh_cmd_history # Where to save history to disk
 HISTSIZE=5000 # How many lines of history to keep in memory
@@ -21,8 +14,8 @@ unsetopt autocd beep extendedglob notify
 # check current binds using: bindkey
 # generate this file using: autoload zkbd ; zkbd
 # source ~/.zkbd/alacritty-:0
-# source ~/.zkbd/tmux-256color-:0
-source ~/.zkbd/screen-256color-:0
+source ~/.zkbd/tmux-256color-:0
+# source ~/.zkbd/screen-256color-:0
 
 bindkey "${key[Home]}" beginning-of-line
 bindkey "${key[End]}" end-of-line
@@ -34,7 +27,6 @@ bindkey "^[[3;5~" kill-word
 #bindkey -e # What set of key binds to use (vim or emacs)
 
 source ~/.zsh_vars
-export PATH="${PATH}:${HOME}/.config/emacs/bin"
 
 # aliases
 alias gst="git status"
@@ -43,24 +35,6 @@ alias gca="git commit -am"
 alias gdf="git diff"
 alias l="eza -lah -s name"
 #alias bat="batcat"
-
-# powerlevel10k
-source ~/powerlevel10k/powerlevel10k.zsh-theme
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# powerline
-#powerline-daemon -q
-#test -x /usr/share/powerline/bindings/zsh/powerline.zsh && /usr/share/powerline/bindings/zsh/powerline.zsh
-#test -x /usr/share/powerline/zsh/powerline.zsh && /usr/share/powerline/zsh/powerline.zsh
-
-# asdf
-. "$HOME/.asdf/asdf.sh"
-# append completions to fpath
-fpath=(${ASDF_DIR}/completions $fpath)
-
-# asdf java
-. $HOME/.asdf/plugins/java/set-java-home.zsh
 
 # auto activate python venv on cd
 function cd() {
