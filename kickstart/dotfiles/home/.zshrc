@@ -9,13 +9,12 @@ setopt sharehistory #Share history across terminals
 setopt incappendhistory #Immediately append to the history file, not just when a term is killed
 setopt nomatch 
 unsetopt autocd beep extendedglob notify
+unsetopt MULTIBYTE
 
 # check key values using: read -r
 # check current binds using: bindkey
 # generate this file using: autoload zkbd ; zkbd
-# source ~/.zkbd/alacritty-:0
-source ~/.zkbd/tmux-256color-:0
-# source ~/.zkbd/screen-256color-:0
+source ~/.zkbd/xterm-256color-:0
 
 bindkey "${key[Home]}" beginning-of-line
 bindkey "${key[End]}" end-of-line
