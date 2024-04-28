@@ -35,6 +35,9 @@ alias gdf="git diff"
 alias l="eza -lah -s name"
 #alias bat="batcat"
 
+export PATH=/usr/local/go/bin:$PATH
+export PATH=/usr/local/node/bin:$PATH
+
 # auto activate python venv on cd
 function cd() {
   builtin cd "$@"
