@@ -1,2 +1,3 @@
 .vscode
 __pycache__
+kickstart/dotfiles/.config/nvim/pack
