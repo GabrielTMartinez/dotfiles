@@ -65,5 +65,6 @@ subprocess.run("./install_files/docker.sh", shell=True, check=True)
 subprocess.run("eval ${autoremove_cmd}", shell=True, check=True)
 
 print("\nDONT FORGET TO CHANGE YOUR SHELL TO ZSH WITH\nchsh -s ${which zsh}\n")
+print("\nInstall nvim plugins:\ngit clone https://github.com/morhetz/gruvbox.git ~/.config/nvim/pack/morhetz/start/gruvbox\ngit clone https://github.com/neovim/nvim-lspconfig ~/.config/nvim/pack/nvim/start/nvim-lspconfig\n")
 
 print("Full install, done!")
