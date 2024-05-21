@@ -36,7 +36,12 @@ alias l="eza -lah -s name"
 #alias bat="batcat"
 
 export PATH=/usr/local/go/bin:$PATH
+export PATH=$HOME/go/bin:$PATH
+
 export PATH=/usr/local/node/bin:$PATH
+
+export JAVA_HOME=/usr/local/jdk
+export PATH=$JAVA_HOME/bin:$PATH
 
 # auto activate python venv on cd
 function cd() {
