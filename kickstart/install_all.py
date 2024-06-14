@@ -56,7 +56,7 @@ subprocess.run("eval ${update_cmd}", shell=True, check=True)
 setup_dotfile.setup_dotfiles()
 subprocess.run("./install_files/cli-utils.sh", shell=True, check=True)
 subprocess.run("./install_files/term-utils.sh", shell=True, check=True)
-subprocess.run("./install_files/docker.sh", shell=True, check=True)
+# subprocess.run("./install_files/docker.sh", shell=True, check=True)
 
 # TODO ncdu
 
