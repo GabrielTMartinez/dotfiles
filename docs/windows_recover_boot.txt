@@ -1,0 +1,13 @@
+1) boot windows iso from usb drive
+2) after selecting language and region, select "repair computer", "troubleshoot" or something along these lines
+3) select "startup repair"
+4) try rebooting if message reported success
+5) if not, select "command line", or something like that, to open the terminal
+6) try "bootrec /fixmbr" and "bootrec /fixboot"
+7) try rebooting if message reported success
+8) if not, on the command line, try "bootrec /scanos"
+9) try rebooting if message reported success
+10) if not, on the command line, try "bootrec /rebuildbcd"
+11) thats all!
+
+https://learn.microsoft.com/en-us/troubleshoot/windows-client/performance/windows-boot-issues-troubleshooting
