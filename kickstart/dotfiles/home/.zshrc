@@ -29,7 +29,7 @@ source ~/.zsh_vars
 
 # aliases
 alias gst="git status"
-alias gpa="git pull --all"
+alias gpa="git pull --all -p"
 alias gca="git commit -am"
 alias gdf="git diff"
 alias l="eza -lah -s name"
