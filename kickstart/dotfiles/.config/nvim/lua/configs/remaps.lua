@@ -1,9 +1,13 @@
+vim.keymap.set("n", "<Space>", "<Nop>", { silent = true, remap = false })
 vim.g.mapleader = " "
 
 --run black for current file
 vim.keymap.set("n", "<leader>cf", ':!black % <CR><CR>')
 vim.keymap.set("n", "<leader>cl", ':!ruff --fix % <CR><CR>')
 -- buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+
+-- Open explorer (netrw) on the side panel
+vim.keymap.set("n", "<leader><leader>", ":Vexplore<CR>")
 
 -- Indent
 vim.keymap.set("n", "<leader>if", "gg=G<C-o>")
