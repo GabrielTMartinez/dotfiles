@@ -13,6 +13,7 @@ vim.opt.belloff = "all"
 -- turn on line numbers
 --vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.nu = true
 
 -- ruler and cursor positions
 --vim.opt.ruler = true
@@ -36,6 +37,11 @@ vim.opt.backspace = { "indent", "eol", "start" }
 
 -- Change Explorer / Netrw style to tree
 vim.g.netrw_liststyle = 3
+vim.g.netrw_winsize = 25
+vim.g.netrw_browse_split = 4 -- open in previous window
+-- Disable netrw banner
+vim.g.netrw_banner = 0
+
 -- Disable netrw if using an explorer plugin, like nvim-tree
 --vim.g.loaded_netrw = 1
 --vim.g.loaded_netrwPlugin = 1
