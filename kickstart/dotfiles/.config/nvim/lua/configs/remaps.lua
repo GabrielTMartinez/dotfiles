@@ -8,6 +8,16 @@ vim.keymap.set("n", "<leader>cl", ':!ruff --fix % <CR><CR>')
 
 -- Open explorer (netrw) on the side panel
 vim.keymap.set("n", "<leader><leader>", ":Vexplore<CR>")
+vim.api.nvim_create_autocmd({"BufAdd"}, {
+  pattern = {"*"},
+  callback = function()
+    if #vim.api.nvim_list_wins() > 1 then
+      vim.g.netrw_browse_split = 4 -- open in previous window
+    else
+      vim.g.netrw_browse_split = 0 -- open in current window
+    end
+  end,
+})
 
 -- Indent
 vim.keymap.set("n", "<leader>if", "gg=G<C-o>")

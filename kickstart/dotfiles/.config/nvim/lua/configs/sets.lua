@@ -38,7 +38,8 @@ vim.opt.backspace = { "indent", "eol", "start" }
 -- Change Explorer / Netrw style to tree
 vim.g.netrw_liststyle = 3
 vim.g.netrw_winsize = 25
-vim.g.netrw_browse_split = 4 -- open in previous window
+--vim.g.netrw_browse_split = 4 -- open in previous window
+--vim.g.netrw_preview = 1 -- use vertical split when opening new window
 -- Disable netrw banner
 vim.g.netrw_banner = 0
 
