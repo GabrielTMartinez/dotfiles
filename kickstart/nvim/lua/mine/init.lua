@@ -6,7 +6,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 vim.keymap.set({"n","v"}, "<C-c>", "\"+y")
-vim.keymap.set("n", "<leader>if", "gg=G<C-o>")
+vim.keymap.set("n", "<leader>if", "gg0vG$=<Esc>")
 
 -- Omnifunc (params autocomplete)
 --vim.keymap.set("i", "<C-Space><C-Space>", "<C-x><C-o>")
@@ -42,22 +42,22 @@ vim.opt.completeopt = { "menu,noselect,preview" }
 
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
 vim.api.nvim_create_autocmd('TextYankPost', {
-  callback = function()
-    vim.highlight.on_yank()
-  end,
-  group = highlight_group,
-  pattern = '*',
+	callback = function()
+		vim.highlight.on_yank()
+	end,
+	group = highlight_group,
+	pattern = '*',
 })
 
 vim.api.nvim_create_user_command('BufferDiff', function()
-    pcall(function ()
-        vim.cmd(":w !diff % -")
-    end)
+	pcall(function ()
+		vim.cmd(":w !diff % -")
+	end)
 end, { desc = 'Show buffer changes since last save' })
 
 vim.api.nvim_create_user_command('GitChanged', function()
-    pcall(function ()
-        vim.cmd(":enew | read !git diff --name-only")
-    end)
+	pcall(function ()
+		vim.cmd(":enew | read !git diff --name-only")
+	end)
 end, { desc = 'Open a new buffer with the paths of changed git files' })
 
