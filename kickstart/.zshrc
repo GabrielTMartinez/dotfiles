@@ -1,7 +1,7 @@
 # Zsh command history
 HISTFILE=~/.zsh_cmd_history # Where to save history to disk
 HISTSIZE=5000 # How many lines of history to keep in memory
-SAVEHIST=5000 # Number of history entries to save to disk
+SAVEHIST=10000 # Number of history entries to save to disk
 
 # Zsh opts
 setopt appendhistory #Append history to the history file (no overwriting)
@@ -14,7 +14,7 @@ unsetopt MULTIBYTE
 # check key values using: read -r
 # check current binds using: bindkey
 # generate this file using: autoload zkbd ; zkbd
-source ~/.zkbd/xterm-256color-:0
+source ~/.zkbd/xterm-256color-:1
 
 bindkey "${key[Home]}" beginning-of-line
 bindkey "${key[End]}" end-of-line
@@ -32,8 +32,8 @@ alias gst="git status"
 alias gpa="git pull --all -p"
 alias gca="git commit -am"
 alias gdf="git diff"
-alias l="eza -lah -s name"
-#alias bat="batcat"
+alias l="exa -lah -s name"
+alias bat="batcat"
 
 export PATH=/usr/local/go/bin:$PATH
 export PATH=$HOME/go/bin:$PATH

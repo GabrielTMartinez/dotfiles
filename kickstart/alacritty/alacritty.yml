@@ -1,0 +1,19 @@
+import:
+  - ~/.config/alacritty/kanagawa_wave.yml
+
+font:
+  normal:
+    family: Hack Nerd Font Mono
+  bold:
+    family: Hack Nerd Font Mono
+  italic:
+    family: Hack Nerd Font Mono
+  bold_italic:
+    family: Hack Nerd Font Mono
+
+shell:
+  program: /usr/bin/zsh
+
+window:
+  decorations: none
+
