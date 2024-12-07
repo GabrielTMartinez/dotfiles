@@ -7,6 +7,7 @@ vim.g.loaded_netrwPlugin = 1
 
 vim.keymap.set({"n","v"}, "<C-c>", "\"+y")
 vim.keymap.set("n", "<leader>if", "gg0vG$=<Esc>")
+vim.keymap.set("n", "gr", vim.lsp.buf.references)
 
 -- Omnifunc (params autocomplete)
 --vim.keymap.set("i", "<C-Space><C-Space>", "<C-x><C-o>")
