@@ -33,7 +33,7 @@ vim.opt.smartindent = true
 --vim.opt.backspace = { "indent", "eol", "start" }
 
 vim.opt.updatetime = 250
-vim.opt.timeoutlen = 300
+vim.opt.timeoutlen = 500
 vim.opt.completeopt = { "menu,noselect,preview" }
 
 local highlight_group = vim.api.nvim_create_augroup('YankHighlight', { clear = true })
