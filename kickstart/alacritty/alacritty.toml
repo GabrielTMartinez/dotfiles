@@ -1,0 +1,29 @@
+import = ["~/.config/alacritty/kanagawa_wave.toml"]
+
+[font.bold]
+family = "Hack Nerd Font Mono"
+
+[font.bold_italic]
+family = "Hack Nerd Font Mono"
+
+[font.italic]
+family = "Hack Nerd Font Mono"
+
+[font.normal]
+family = "Hack Nerd Font Mono"
+
+[shell]
+program = "/usr/bin/zsh"
+
+[window]
+decorations = "none"
+
+# need to be converted to toml
+
+# selection:
+#   save_to_clipboard: true
+
+# startup_mode: Maximized
+
+# env:
+#   TERM: xterm-256color
