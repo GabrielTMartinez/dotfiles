@@ -111,6 +111,8 @@ require("lazy").setup({
 				-- https://github.com/LuaLS/lua-language-server
 				require'lspconfig'.lua_ls.setup{}
 
+				require'lspconfig'.gopls.setup{}
+
 			end
 		},
 	},
