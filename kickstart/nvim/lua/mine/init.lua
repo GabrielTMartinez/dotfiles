@@ -1,6 +1,10 @@
 vim.keymap.set("n", "<Space>", "<Nop>", { silent = true, remap = false })
 vim.g.mapleader = " "
 
+--when using nvim-tree plugin
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 vim.keymap.set({"n","v"}, "<C-c>", "\"+y")
 vim.keymap.set("n", "<leader>if", "gg=G<C-o>")
 
