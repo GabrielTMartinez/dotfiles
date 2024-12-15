@@ -8,10 +8,11 @@ vim.g.loaded_netrwPlugin = 1
 vim.keymap.set({"n","v"}, "<C-c>", "\"+y")
 vim.keymap.set("n", "<leader>if", "gg0vG$=<Esc>")
 vim.keymap.set("n", "gr", vim.lsp.buf.references)
+vim.keymap.set("n", "ga", vim.lsp.buf.code_action)
+vim.keymap.set("n", "gi", vim.lsp.buf.implementation)
 
 -- Omnifunc (params autocomplete)
---vim.keymap.set("i", "<C-Space><C-Space>", "<C-x><C-o>")
-
+vim.keymap.set("i", "<C-Space><C-Space>", "<C-x><C-o>")
 
 vim.opt.clipboard:append("unnamedplus")
 vim.opt.encoding = "utf-8"

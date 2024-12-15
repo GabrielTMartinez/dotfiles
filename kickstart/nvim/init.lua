@@ -33,19 +33,21 @@ require("lazy").setup({
 		{
 			"nvim-treesitter/nvim-treesitter",
 			build = ":TSUpdate",
-			config = function () 
+			config = function ()
 				local configs = require("nvim-treesitter.configs")
 
 				configs.setup({
-					ensure_installed = { "lua", "vim", "vimdoc", "query", "javascript", "html", "go", "python"},
+					ensure_installed = { "lua", "vim", "vimdoc", "query", "javascript", "typescript", "html", "go", "python"},
 					sync_install = false,
 					highlight = { enable = true },
-					indent = { enable = true },  
+					indent = { enable = true },
 				})
 			end
 		},
 		{
-			'nvim-telescope/telescope.nvim', tag = '0.1.8', dependencies = { 'nvim-lua/plenary.nvim' },
+			'nvim-telescope/telescope.nvim',
+			tag = '0.1.8',
+			dependencies = { 'nvim-lua/plenary.nvim' },
 			config = function()
 				local builtin = require('telescope.builtin')
 				vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find files' })
@@ -71,63 +73,69 @@ require("lazy").setup({
 		},
 		{
 			'neovim/nvim-lspconfig',
+			dependencies = {
+				'hrsh7th/nvim-cmp',
+				'hrsh7th/cmp-nvim-lsp',
+			},
 			config = function()
 
+				--[[ 
 				vim.api.nvim_create_autocmd('LspAttach', {
 					group = vim.api.nvim_create_augroup('kickstart-lsp-attach', { clear = true }),
 					callback = function(event)
 
-						-- The following two autocommands are used to highlight references of the
-						-- word under your cursor when your cursor rests there for a little while.
-						--    See `:help CursorHold` for information about when this is executed
-						--
-						-- When you move your cursor, the highlights will be cleared (the second autocommand).
-						local client = vim.lsp.get_client_by_id(event.data.client_id)
-						if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_documentHighlight) then
-							local highlight_augroup = vim.api.nvim_create_augroup('kickstart-lsp-highlight', { clear = false })
-							vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
-								buffer = event.buf,
-								group = highlight_augroup,
-								callback = vim.lsp.buf.document_highlight,
-							})
-
-							vim.api.nvim_create_autocmd({ 'CursorMoved', 'CursorMovedI' }, {
-								buffer = event.buf,
-								group = highlight_augroup,
-								callback = vim.lsp.buf.clear_references,
-							})
-
-							vim.api.nvim_create_autocmd('LspDetach', {
-								group = vim.api.nvim_create_augroup('kickstart-lsp-detach', { clear = true }),
-								callback = function(event2)
-									vim.lsp.buf.clear_references()
-									vim.api.nvim_clear_autocmds { group = 'kickstart-lsp-highlight', buffer = event2.buf }
-								end,
-							})
-						end
 					end,
-				})
+				}) 
+				--]]
+
+				local lspconfig_defaults = require('lspconfig').util.default_config
+				lspconfig_defaults.capabilities = vim.tbl_deep_extend(
+					'force',
+					lspconfig_defaults.capabilities,
+					require('cmp_nvim_lsp').default_capabilities()
+				)
 
 				-- https://github.com/LuaLS/lua-language-server
-				require'lspconfig'.lua_ls.setup{
+				require('lspconfig').lua_ls.setup{
 					settings = {
 						Lua = {
 							diagnostics = {
-								-- Get the language server to recognize the `vim` global
 								globals = {'vim'},
 							},
 						},
 					},
 				}
 
-				require'lspconfig'.gopls.setup{}
+				-- https://github.com/golang/tools/tree/master/gopls
+				require('lspconfig').gopls.setup{}
+
+				-- https://github.com/typescript-language-server/typescript-language-server
+				require('lspconfig').ts_ls.setup{}
+
+				local cmp = require('cmp')
+				cmp.setup({
+					sources = {
+						{name = 'nvim_lsp'},
+					},
+					snippet = {
+						expand = function(args)
+							vim.snippet.expand(args.body)
+						end,
+					},
+					mapping = cmp.mapping.preset.insert({
+						['<C-Space>'] = cmp.mapping.complete {},
+						['<CR>'] = cmp.mapping.confirm { select = true },
+					}),
+				})
 
 			end
 		},
+		--[[{
+			'hrsh7th/nvim-cmp',
+			event = 'InsertEnter',
+			dependencies.
+		},--]]
 	},
-	-- Configure any other settings here. See the documentation for more details.
-	-- colorscheme that will be used when installing plugins.
 	install = { missing = false },
-	-- automatically check for plugin updates
 	checker = { enabled = false },
 })
