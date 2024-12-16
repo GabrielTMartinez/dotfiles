@@ -138,4 +138,5 @@ require("lazy").setup({
 	},
 	install = { missing = false },
 	checker = { enabled = false },
+	rocks = { enabled = false },
 })
