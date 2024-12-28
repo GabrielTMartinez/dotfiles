@@ -21,10 +21,13 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	spec = {
 		{
-			'morhetz/gruvbox',
+			--'morhetz/gruvbox',
+			'rebelot/kanagawa.nvim',
 			priority = 1000,
 			init = function()
-				vim.cmd.colorscheme 'gruvbox'
+				--vim.cmd.colorscheme 'gruvbox'
+				vim.cmd.colorscheme 'kanagawa-dragon'
+				--vim.cmd.colorscheme 'kanagawa-wave'
 
 				-- You can configure highlights by doing something like:
 				vim.cmd.hi 'Comment gui=none'

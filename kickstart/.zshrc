@@ -14,7 +14,9 @@ unsetopt MULTIBYTE
 # check key values using: read -r
 # check current binds using: bindkey
 # generate this file using: autoload zkbd ; zkbd
-source ~/.zkbd/xterm-256color-:1
+#source ~/.zkbd/xterm-256color-:1
+#source $HOME/.zkbd/tmux-256color-:1
+source $HOME/.zkbd/xterm-ghostty-:1
 
 bindkey "${key[Home]}" beginning-of-line
 bindkey "${key[End]}" end-of-line
@@ -42,6 +44,8 @@ export PATH=/usr/local/node/bin:$PATH
 
 export JAVA_HOME=/usr/local/jdk
 export PATH=$JAVA_HOME/bin:$PATH
+
+export PATH=/usr/local/zig:$PATH
 
 # auto activate python venv on cd
 function cd() {
@@ -125,3 +129,4 @@ else
     # eval/source/. command, register function for later
     compdef _localstack_completion localstack
 fi
+
