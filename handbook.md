@@ -112,3 +112,7 @@ vault kv get -mount=secret hello
 nvim /etc/default/grub
 # remake grub config to apply changes on next boot
 sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+
+# encrypt and decrypt with gpg
+gpg -c <filename>
+gpg -d <gpg-filename>
