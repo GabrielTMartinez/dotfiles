@@ -16,7 +16,7 @@ echo '-----'
 
 echo '-----'
 echo -e "${LIGHTCYAN}Copying dotfiles to .config...${NC}"
-ln -s {$(pwd)/alacritty,$(pwd)/nvim} $HOME/.config/
+ln -s {$(pwd)/alacritty,$(pwd)/nvim,$(pwd)/ghostty} $HOME/.config/
 echo '-----'
 
 echo '-----'
