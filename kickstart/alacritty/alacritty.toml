@@ -17,6 +17,7 @@ program = "/usr/bin/zsh"
 
 [window]
 decorations = "none"
+startup_mode = "Maximized"
 
 # need to be converted to toml
 
