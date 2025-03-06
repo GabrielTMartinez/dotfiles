@@ -26,8 +26,8 @@ vim.opt.relativenumber = true
 vim.opt.number = true
 vim.opt.cursorline = true
 vim.opt.cursorcolumn = true
-vim.opt.list = true
-vim.opt.listchars = "space:·,tab:->,trail:-,nbsp:+"
+--vim.opt.list = true
+--vim.opt.listchars = "space:·,tab:->,trail:-,nbsp:+"
 -- indentation configs
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 0
