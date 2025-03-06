@@ -2,6 +2,8 @@ font-family = "Hack Nerd Font"
 window-decoration = false
 theme = catppuccin-mocha
 maximize = true
+#gtk-adwaita = false
+#gtk-tabs-location = hidden
 
 #keybind = ctrl+b>c=new_tab
 #keybind = ctrl+b>p=previous_tab
