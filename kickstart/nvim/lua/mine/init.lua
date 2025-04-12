@@ -12,6 +12,9 @@ vim.keymap.set("n", "ga", vim.lsp.buf.code_action)
 vim.keymap.set("n", "gi", vim.lsp.buf.implementation)
 vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename)
 
+--for deleting whole words in insert mode
+vim.keymap.set("i", "<C-BS>", "<C-o>diw<BS>", { noremap = true })
+
 
 -- Omnifunc (params autocomplete)
 vim.keymap.set("i", "<C-Space><C-Space>", "<C-x><C-o>")

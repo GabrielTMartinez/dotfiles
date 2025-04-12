@@ -37,6 +37,8 @@ alias gdf="git diff"
 alias l="exa -lah -s name"
 alias bat="batcat"
 
+alias nvimcfg="nvim ~/.config/nvim/"
+
 export PATH=/usr/local/go/bin:$PATH
 export PATH=$HOME/go/bin:$PATH
 
