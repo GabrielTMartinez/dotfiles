@@ -1,0 +1,7 @@
+gnome-screenshot
+gnome-shell-extension-dash-to-panel
+gnome-shell-extension-desktop-icons-ng
+gnome-shell-extension-hide-activities
+gnome-shell-extension-top-icons-plus
+proton-vpn-gnome-desktop
+task-gnome-desktop
